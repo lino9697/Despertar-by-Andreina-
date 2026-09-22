@@ -327,7 +327,7 @@
 
   /* CONTACT */
   .contact{background:var(--bg);}
-  .contact-info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:32px;}
+  .contact-info-grid{display:grid;grid-template-columns:1fr;max-width:280px;gap:20px;margin-top:32px;}
   .info-card{border:1px solid var(--border);border-radius:var(--r-md);padding:24px;background:var(--bg-alt);}
   .info-card .eyebrow{color:var(--sage);}
   .info-card .eyebrow::before{background:var(--sage);}
@@ -513,10 +513,6 @@
         <h2>Agenda una consulta gratuita.</h2>
         <p>Una conversación gratuita de 20 minutos para contarme qué está pasando y ver si somos buena compañía de trabajo. Escríbele por WhatsApp y coordinan juntas el horario que mejor te funcione.</p>
         <div class="direct-links">
-          <a class="direct-link" href="mailto:coachandreina@gmail.com">
-            <span class="ic"><svg viewBox="0 0 24 24"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11Z"/><path d="m4 6.5 8 6.5 8-6.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <span>coachandreina@gmail.com<small>Suele responder en 1–2 días hábiles</small></span>
-          </a>
           <a class="direct-link" href="tel:+17863023919">
             <span class="ic"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1.1.5 1.1 1.1V20c0 .6-.5 1-1.1 1C10.6 21 3 13.4 3 4.1 3 3.5 3.5 3 4.1 3H7.5c.6 0 1.1.5 1.1 1.1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8Z" stroke-linejoin="round"/></svg></span>
             <span>(786) 302-3919<small>Llamada, SMS o WhatsApp</small></span>
@@ -543,36 +539,25 @@
       <div class="panel-copy">
         <span class="eyebrow">Contacto</span>
         <h2>¿Tienes dudas antes de agendar?</h2>
-        <p>Escríbeme directamente — Andreina lee cada mensaje personalmente, y las sesiones están disponibles por teléfono o videollamada, estés donde estés.</p>
+        <p>Escríbele directamente por WhatsApp — Andreina lee cada mensaje personalmente, y las sesiones están disponibles por teléfono o videollamada, estés donde estés.</p>
         <div class="contact-info-grid">
           <div class="info-card">
-            <span class="eyebrow">Correo</span>
-            <p>coachandreina@gmail.com</p>
-          </div>
-          <div class="info-card">
-            <span class="eyebrow">Teléfono</span>
+            <span class="eyebrow">Teléfono / WhatsApp</span>
             <p>(786) 302-3919</p>
           </div>
         </div>
       </div>
-      <div class="card">
-        <form id="contactForm" novalidate>
-          <div class="field">
-            <label for="ctName">Nombre completo</label>
-            <input id="ctName" name="name" type="text" required autocomplete="name">
-          </div>
-          <div class="field">
-            <label for="ctEmail">Correo electrónico</label>
-            <input id="ctEmail" name="email" type="email" required autocomplete="email">
-          </div>
-          <div class="field">
-            <label for="ctMsg">Mensaje</label>
-            <textarea id="ctMsg" name="message" required placeholder="¿En qué puede ayudarte Andreina?"></textarea>
-          </div>
-          <button type="submit" class="btn btn-outline btn-block">Enviar mensaje</button>
-          <p class="form-note">Esto abre tu aplicación de correo con tu mensaje listo para enviar.</p>
-          <p class="form-status" id="ctStatus"></p>
-        </form>
+      <div class="card whatsapp-card">
+        <span class="ic-lg">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.13c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.11.11-1.79-.11-.41-.13-.95-.31-1.63-.6-2.87-1.24-4.74-4.14-4.88-4.33-.14-.19-1.17-1.56-1.17-2.97 0-1.41.74-2.1 1-2.39.26-.29.58-.36.77-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2 .9 2.14.07.14.11.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.16-.19.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.79.85.26.13.44.19.5.3.06.11.06.63-.18 1.31Z"/></svg>
+        </span>
+        <h3>Escríbele por WhatsApp</h3>
+        <p>¿Tienes una pregunta antes de agendar tu consulta? Escríbele directo y con gusto te responde.</p>
+        <a id="waContactLink" class="btn btn-outline btn-block" href="https://wa.me/17863023919" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.13c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.11.11-1.79-.11-.41-.13-.95-.31-1.63-.6-2.87-1.24-4.74-4.14-4.88-4.33-.14-.19-1.17-1.56-1.17-2.97 0-1.41.74-2.1 1-2.39.26-.29.58-.36.77-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2 .9 2.14.07.14.11.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.16-.19.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.79.85.26.13.44.19.5.3.06.11.06.63-.18 1.31Z"/></svg>
+          Escribir por WhatsApp
+        </a>
+        <p class="form-note">Se abre WhatsApp con un mensaje ya escrito — puedes editarlo antes de enviarlo.</p>
       </div>
     </div>
   </section>
@@ -603,7 +588,7 @@
         <div class="footer-col">
           <h4>Conecta</h4>
           <a href="#book">Agenda una consulta</a>
-          <a href="mailto:coachandreina@gmail.com">Escribir a Andreina</a>
+          <a href="https://wa.me/17863023919" target="_blank" rel="noopener">Escribir por WhatsApp</a>
           <a href="tel:+17863023919">(786) 302-3919</a>
         </div>
       </div>
@@ -644,47 +629,13 @@
     });
   }
 
-  function buildMailto(to, subject, lines){
-    var body = lines.join('\n');
-    return 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  function setWaLink(id, message){
+    var el = document.getElementById(id);
+    if (el) el.href = 'https://wa.me/17863023919?text=' + encodeURIComponent(message);
   }
 
-  function wireForm(formId, statusId, build){
-    var form = document.getElementById(formId);
-    var status = document.getElementById(statusId);
-    if (!form) return;
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      if (!form.checkValidity()){
-        form.reportValidity();
-        return;
-      }
-      var data = {};
-      new FormData(form).forEach(function(v,k){ data[k] = (v || '').toString().trim(); });
-      var href = build(data);
-      window.location.href = href;
-      if (status){
-        status.textContent = 'Abriendo tu aplicación de correo… si no ocurre nada, escribe directamente a coachandreina@gmail.com.';
-        status.classList.add('show','ok');
-      }
-    });
-  }
-
-  var waLink = document.getElementById('waBookLink');
-  if (waLink){
-    var waMsg = 'Hola Andreina, me gustaría agendar mi consulta gratuita de 20 minutos. Mi nombre es: ';
-    waLink.href = 'https://wa.me/17863023919?text=' + encodeURIComponent(waMsg);
-  }
-
-  wireForm('contactForm','ctStatus', function(d){
-    return buildMailto('coachandreina@gmail.com','Consulta desde la web — Despertar', [
-      'Nombre: ' + d.name,
-      'Correo: ' + d.email,
-      '',
-      'Mensaje:',
-      d.message
-    ]);
-  });
+  setWaLink('waBookLink', 'Hola Andreina, me gustaría agendar mi consulta gratuita de 20 minutos. Mi nombre es: ');
+  setWaLink('waContactLink', 'Hola Andreina, tengo una pregunta antes de agendar mi consulta.');
 })();
 </script>
 
