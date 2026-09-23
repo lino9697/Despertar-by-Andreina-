@@ -243,20 +243,24 @@
   .hero10-fan{width:100%;max-width:600px;}
 
   /* COVERFLOW — vanilla JS 3D carousel (no framework needed) */
-  .coverflow{width:100%;--cf-card:clamp(150px, 30vw, 240px);}
+  .coverflow{width:100%;position:relative;--cf-card:clamp(190px, 32vw, 320px);}
   .coverflow-frame{
-    position:relative;overflow:hidden;padding:20px 0 8px;cursor:grab;
+    position:relative;padding:28px 0 20px;cursor:grab;
     perspective:calc(var(--cf-card) * 3);touch-action:pan-y;outline:none;
   }
   .coverflow-frame:active{cursor:grabbing;}
   .coverflow-frame:focus-visible{outline:2px solid var(--gold);outline-offset:4px;}
-  .coverflow-stack{position:relative;height:var(--cf-card);transform-style:preserve-3d;}
+  .coverflow-stack{
+    position:relative;overflow:hidden;
+    height:calc(var(--cf-card) * 1.25 + 16px);
+    transform-style:preserve-3d;
+  }
   .coverflow-card{
-    position:absolute;left:50%;top:0;width:var(--cf-card);aspect-ratio:4/5;
+    position:absolute;left:50%;top:50%;width:var(--cf-card);aspect-ratio:4/5;
     border-radius:16px;overflow:hidden;box-shadow:var(--shadow);outline:1px solid var(--border);
     will-change:transform,opacity;user-select:none;
   }
-  .coverflow-card img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;}
+  .coverflow-card img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;-webkit-user-drag:none;}
   .coverflow-nav{
     position:absolute;top:50%;z-index:50;transform:translateY(-50%);
     width:38px;height:38px;border-radius:50%;background:var(--bg);border:1px solid var(--border);
@@ -695,7 +699,7 @@
         var distance = Math.abs(offset);
         var ramp = Math.pow(distance, falloff);
         var tilt = Math.min(rotate * ramp, 82) * Math.sign(offset);
-        card.style.transform = 'translateX(calc(-50% + ' + (offset * pitch) + 'px)) translateZ(' + (-depth * width * ramp) + 'px) rotateY(' + (-tilt) + 'deg)';
+        card.style.transform = 'translate(calc(-50% + ' + (offset * pitch) + 'px), -50%) translateZ(' + (-depth * width * ramp) + 'px) rotateY(' + (-tilt) + 'deg)';
         var edge = Math.min(1, Math.max(0, count / 2 - distance));
         card.style.opacity = String(Math.max(0, 1 - fade * distance) * edge);
         card.style.zIndex = String(100 - Math.round(distance));
@@ -758,24 +762,33 @@
     }
 
     frame.addEventListener('pointerdown', function(e){
+      if (e.target.closest && e.target.closest('.coverflow-nav')) return;
+      e.preventDefault();
       if (raf !== null){ cancelAnimationFrame(raf); raf = null; }
       frame.setPointerCapture(e.pointerId);
       target = pos;
-      drag = { id: e.pointerId, x: e.clientX, pos: pos };
+      drag = { id: e.pointerId, x: e.clientX, pos: pos, v: 0, t: performance.now() };
     });
 
     frame.addEventListener('pointermove', function(e){
       if (!drag || drag.id !== e.pointerId) return;
       var pitch = width * (1 + gap);
       if (!pitch) return;
+      var now = performance.now();
+      var previous = pos;
       pos = drag.pos - (e.clientX - drag.x) / pitch;
+      // Cards per second, so a quick short flick still crosses the snap
+      // threshold even when the raw drag distance alone would not.
+      drag.v = (pos - previous) / Math.max(now - drag.t, 1) * 1000;
+      drag.t = now;
       paint();
     });
 
     function endDrag(e){
       if (!drag || drag.id !== e.pointerId) return;
+      var carried = Math.max(-2, Math.min(2, drag.v * 0.18));
       drag = null;
-      settle(Math.round(pos));
+      settle(Math.round(pos + carried));
     }
     frame.addEventListener('pointerup', endDrag);
     frame.addEventListener('pointercancel', endDrag);
