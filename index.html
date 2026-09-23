@@ -240,10 +240,14 @@
   }
   .credential-badge svg{width:18px;height:18px;flex-shrink:0;}
 
-  .hero10-fan{width:100%;max-width:600px;}
+  /* Breaks out of hero10-inner's 960px cap to fill most of the viewport on wide screens. */
+  .hero10-fan{
+    position:relative;left:50%;transform:translateX(-50%);
+    width:calc(100vw - 48px);max-width:1600px;
+  }
 
   /* COVERFLOW — vanilla JS 3D carousel (no framework needed) */
-  .coverflow{width:100%;position:relative;--cf-card:clamp(190px, 32vw, 320px);}
+  .coverflow{width:100%;position:relative;--cf-card:clamp(190px, 20vw, 440px);}
   .coverflow-frame{
     position:relative;padding:28px 0 20px;cursor:grab;
     perspective:calc(var(--cf-card) * 3);touch-action:pan-y;outline:none;
