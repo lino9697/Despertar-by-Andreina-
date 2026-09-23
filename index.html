@@ -65,6 +65,7 @@
   section[id],header[id]{scroll-margin-top:92px;}
   body{
     margin:0;
+    overflow-x:hidden;
     background:var(--bg);
     color:var(--text);
     font-family:var(--font-b);
@@ -120,17 +121,50 @@
   .nav-toggle{display:none;background:none;border:none;padding:6px;cursor:pointer;}
   .nav-toggle svg{width:24px;height:24px;stroke:var(--text);}
 
+  /* The mobile drawer is a separate block (see markup comment), hidden on
+     desktop; nav-links stays exactly as it was for the horizontal menu. */
+  .nav-panel{display:none;}
+  .nav-close{background:none;border:none;padding:6px;cursor:pointer;}
+  .nav-close svg{width:22px;height:22px;stroke:currentColor;}
+  .nav-backdrop{
+    display:none;position:fixed;left:0;right:0;bottom:0;
+    background:rgba(38,36,27,.55);opacity:0;pointer-events:none;
+    transition:opacity .3s ease;z-index:110;
+  }
+  html.nav-lock{overflow:hidden;}
+
   @media (max-width:860px){
-    .nav-links{
-      position:fixed;inset:64px 0 0 0;background:var(--bg);
-      flex-direction:column;justify-content:flex-start;align-items:flex-start;
-      padding:32px 28px;gap:22px;transform:translateX(100%);transition:transform .3s ease;
-      border-top:1px solid var(--border);
-    }
-    .nav-links.is-open{transform:translateX(0);}
-    .nav-links a{font-size:1.05rem;}
-    .nav-cta{width:100%;text-align:center;}
+    .nav-links{display:none;}
     .nav-toggle{display:inline-flex;}
+
+    /* A dark drawer, deliberately different from the page's own khaki
+       background, so it reads as a distinct overlay rather than more page
+       content. Starts below the nav bar so the wordmark stays visible. */
+    .nav-panel{
+      display:flex;flex-direction:column;
+      position:fixed;top:64px;right:0;bottom:0;
+      width:min(340px, 86vw);
+      background:var(--text);color:var(--bg);
+      transform:translateX(100%);transition:transform .32s cubic-bezier(.22,1,.36,1);
+      z-index:120;box-shadow:-24px 0 64px -24px rgba(0,0,0,.45);
+      padding:28px 24px 32px;overflow-y:auto;
+    }
+    .nav-panel.is-open{transform:translateX(0);}
+    .nav-panel-head{
+      display:flex;align-items:center;justify-content:space-between;
+      padding-bottom:20px;margin-bottom:8px;border-bottom:1px solid rgba(245,241,227,.16);
+    }
+    .nav-panel-title{font-family:var(--font-d);font-style:italic;font-size:1.15rem;color:var(--bg);}
+    .nav-close{color:var(--bg);}
+    .nav-panel-links{
+      list-style:none;margin:0;padding:0;
+      display:flex;flex-direction:column;align-items:flex-start;gap:22px;
+    }
+    .nav-panel-links a{font-size:1.05rem;font-weight:600;text-decoration:none;color:var(--bg);}
+    .nav-panel-links a:hover{color:var(--gold);}
+    .nav-panel-links .nav-cta{width:100%;text-align:center;background:var(--bg);color:var(--text);border-color:var(--bg);}
+    .nav-backdrop{display:block;top:64px;}
+    .nav-backdrop.is-open{opacity:1;pointer-events:auto;}
   }
 
   /* HERO 05 — editorial split hero */
@@ -411,18 +445,42 @@
       </svg>
       Despertar
     </a>
-    <ul class="nav-links" id="navLinks">
+
+    <ul class="nav-links">
       <li><a href="#about">Sobre mí</a></li>
       <li><a href="#helps">En qué te acompaño</a></li>
       <li><a href="#approach">Enfoque</a></li>
       <li><a href="#contact">Contacto</a></li>
       <li><a class="nav-cta" href="#book">Agenda una consulta</a></li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navPanel">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
   </div>
 </nav>
+
+<!-- Lives outside <nav> on purpose: <nav> has backdrop-filter, which per spec
+     makes it a containing block for position:fixed descendants — nesting the
+     drawer inside it broke the fixed positioning (it sized itself against the
+     ~64px nav bar instead of the viewport). A separate mobile-only link list
+     avoids that entirely. -->
+<div class="nav-backdrop" id="navBackdrop"></div>
+<div class="nav-panel" id="navPanel">
+  <div class="nav-panel-head">
+    <span class="nav-panel-title">Menú</span>
+    <button class="nav-close" id="navClose" aria-label="Cerrar menú">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <ul class="nav-panel-links">
+    <li><a href="#about">Sobre mí</a></li>
+    <li><a href="#helps">En qué te acompaño</a></li>
+    <li><a href="#approach">Enfoque</a></li>
+    <li><a href="#contact">Contacto</a></li>
+    <li><a class="nav-cta" href="#book">Agenda una consulta</a></li>
+  </ul>
+</div>
 
 <main id="main">
 
@@ -653,17 +711,26 @@
   onScroll();
 
   var toggle = document.getElementById('navToggle');
-  var links = document.getElementById('navLinks');
-  if (toggle && links){
-    toggle.addEventListener('click', function(){
-      var open = links.classList.toggle('is-open');
+  var panel = document.getElementById('navPanel');
+  var navClose = document.getElementById('navClose');
+  var backdrop = document.getElementById('navBackdrop');
+  if (toggle && panel){
+    var setMenu = function(open){
+      panel.classList.toggle('is-open', open);
+      if (backdrop) backdrop.classList.toggle('is-open', open);
+      document.documentElement.classList.toggle('nav-lock', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+    toggle.addEventListener('click', function(){
+      setMenu(!panel.classList.contains('is-open'));
     });
-    links.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){
-        links.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
+    if (navClose) navClose.addEventListener('click', function(){ setMenu(false); });
+    if (backdrop) backdrop.addEventListener('click', function(){ setMenu(false); });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') setMenu(false);
+    });
+    panel.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ setMenu(false); });
     });
   }
 
