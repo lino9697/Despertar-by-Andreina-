@@ -176,20 +176,23 @@
   .db-layer{position:absolute;inset:0;pointer-events:none;}
   .db-stage [data-sc]{opacity:0;}
   .db-grain{position:absolute;inset:0;pointer-events:none;opacity:.06;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");}
-  .db-book-wrap{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d;perspective:1400px;--bw:min(24cqw,33cqh);--bh:calc(var(--bw) * 1.36);--bd:calc(var(--bw) * .17);}
+  .db-book-wrap{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d;perspective:1400px;--bw:min(24cqw,33cqh);--bh:calc(var(--bw) * 1.36);--bd:calc(var(--bw) * .17);--open:0;--turn:0;}
   .db-book{position:absolute;left:0;top:0;width:0;height:0;transform-style:preserve-3d;}
-  .db-face{position:absolute;left:0;top:0;pointer-events:none;backface-visibility:visible;}
-  .db-cover-f{width:var(--bw);height:var(--bh);transform:translate(-50%,-50%) translateZ(calc(var(--bd) / 2));border-radius:3px 9px 9px 3px;overflow:hidden;background:#3a2a22;box-shadow:inset 0 0 0 1px rgba(200,165,93,.35);}
-  .db-cover-f img{width:100%;height:100%;object-fit:cover;display:block;}
-  .db-cover-f::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,240,210,.14) 0%,transparent 34%,transparent 70%,rgba(0,0,0,.22) 100%);pointer-events:none;}
-  .db-cover-b{width:var(--bw);height:var(--bh);transform:translate(-50%,-50%) rotateY(180deg) translateZ(calc(var(--bd) / 2));border-radius:3px 9px 9px 3px;background:linear-gradient(135deg,#3a2a22,#24180f 70%,#2e2019);}
-  .db-spine{width:var(--bd);height:var(--bh);transform:translate(-50%,-50%) rotateY(-90deg) translateZ(calc(var(--bw) / 2));background:linear-gradient(90deg,#2a1c14,#4a3224 45%,#2a1c14);box-shadow:inset 0 0 0 1px rgba(200,165,93,.25);}
+  .db-face{position:absolute;left:0;top:0;pointer-events:none;}
+  .db-back{width:var(--bw);height:var(--bh);transform:translate(-50%,-50%) rotateY(180deg) translateZ(calc(var(--bd) / 2));border-radius:3px 9px 9px 3px;background:linear-gradient(135deg,#3a2a22,#24180f 70%,#2e2019);}
+  .db-spine{width:var(--bd);height:var(--bh);transform:translate(-50%,-50%) rotateY(-90deg) translateZ(calc(var(--bw) / 2));background:linear-gradient(90deg,#2a1c14,#4a3224 45%,#2a1c14);}
   .db-spine::before,.db-spine::after{content:"";position:absolute;left:0;right:0;height:1px;background:rgba(200,165,93,.6);}
   .db-spine::before{top:14%;}
   .db-spine::after{bottom:14%;}
-  .db-pages-r{width:calc(var(--bd) * .9);height:calc(var(--bh) * .96);transform:translate(-50%,-50%) rotateY(90deg) translateZ(calc(var(--bw) / 2 - 4px));background:repeating-linear-gradient(180deg,#f1e6c9 0 2px,#c9b78e 2px 3px);}
-  .db-pages-t{width:var(--bw);height:calc(var(--bd) * .9);transform:translate(-50%,-50%) rotateX(90deg) translateZ(calc(var(--bh) / 2 - 4px));background:repeating-linear-gradient(90deg,#f1e6c9 0 2px,#c9b78e 2px 3px);}
-  .db-pages-u{width:var(--bw);height:calc(var(--bd) * .9);transform:translate(-50%,-50%) rotateX(-90deg) translateZ(calc(var(--bh) / 2 - 4px));background:repeating-linear-gradient(90deg,#f1e6c9 0 2px,#c9b78e 2px 3px);}
+  .db-pages-r{width:calc(var(--bd) * .9);height:calc(var(--bh) * .96);transform:translate(-50%,-50%) rotateY(90deg) translateZ(calc(var(--bw) / 2 - 4px));background:repeating-linear-gradient(180deg,#f1e6c9 0 2px,#c9b78e 2px 3px);opacity:clamp(0,1 - var(--open) * 1.6,1);}
+  .db-spread{width:calc(var(--bw) * 2);height:var(--bh);transform:translate(-50%,-50%);background:linear-gradient(90deg,#e6d6ae 0%,#f6eed8 46%,#a9956a 50%,#f6eed8 54%,#e6d6ae 100%);box-shadow:inset 0 0 40px rgba(90,60,30,.18);opacity:clamp(0,(var(--open) - .25) * 1.5,1);}
+  .db-sheet{position:absolute;left:0;top:0;width:var(--bw);height:var(--bh);top:calc(var(--bh) * -0.5);transform-origin:0 50%;transform:rotateY(calc(clamp(0, var(--turn) * 1.8 - var(--d), 1) * -180deg)) translateZ(1px);background:linear-gradient(90deg,#f1e6c9,#f8f0da 60%,#e9dcb8);opacity:clamp(0,(var(--open) - .5) * 2,1);}
+  .db-hinge{position:absolute;left:calc(var(--bw) * -0.5);top:0;width:0;height:0;transform-style:preserve-3d;transform:translateZ(calc(var(--bd) / 2)) rotateY(calc(var(--open) * -170deg));}
+  .db-cover-f,.db-cover-in{position:absolute;left:0;top:calc(var(--bh) * -0.5);width:var(--bw);height:var(--bh);backface-visibility:hidden;border-radius:3px 9px 9px 3px;}
+  .db-cover-f{overflow:hidden;background:#3a2a22;}
+  .db-cover-f img{width:100%;height:100%;object-fit:cover;display:block;}
+  .db-cover-f::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,240,210,.14) 0%,transparent 34%,transparent 70%,rgba(0,0,0,.22) 100%);pointer-events:none;}
+  .db-cover-in{transform:rotateY(180deg);background:linear-gradient(135deg,#f3e8cc,#e6d5ae);box-shadow:inset 0 0 0 6px rgba(120,80,40,.12);}
   .db-shadow{position:absolute;left:50%;top:50%;width:min(30cqw,40cqh);height:min(6cqw,8cqh);transform:translate(-50%,calc(min(16cqw,22cqh) * 0.9));border-radius:50%;background:radial-gradient(closest-side,rgba(38,36,27,.32),transparent);filter:blur(6px);pointer-events:none;}
   .db-row-top{position:absolute;left:5cqw;right:5cqw;top:5cqh;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;}
   .db-brand-title{font-family:var(--font-d);font-size:clamp(25px,4cqw,58px);line-height:.82;letter-spacing:.02em;text-transform:uppercase;}
@@ -511,12 +514,17 @@
       <div class="db-shadow" aria-hidden="true"></div>
       <div class="db-book-wrap" data-bible aria-hidden="true">
         <div class="db-book">
-          <div class="db-face db-cover-f"><img src="images/bible-cover.jpg" alt="" draggable="false"></div>
-          <div class="db-face db-cover-b"></div>
+          <div class="db-face db-back"></div>
           <div class="db-face db-spine"></div>
           <div class="db-face db-pages-r"></div>
-          <div class="db-face db-pages-t"></div>
-          <div class="db-face db-pages-u"></div>
+          <div class="db-spread"></div>
+          <div class="db-sheet" style="--d:0"></div>
+          <div class="db-sheet" style="--d:.2"></div>
+          <div class="db-sheet" style="--d:.4"></div>
+          <div class="db-hinge">
+            <div class="db-cover-f"><img src="images/bible-cover.jpg" alt="" draggable="false"></div>
+            <div class="db-cover-in"></div>
+          </div>
         </div>
       </div>
 
@@ -1037,18 +1045,17 @@
     return { el: el, scene: Number(el.getAttribute("data-sc")), fx: el.getAttribute("data-fx") || "rise", delay: Number(el.getAttribute("data-d")) || 0, last: -1 };
   });
 
+  // open: 0 closed, 1 fully open. turn: how far the page sheets have turned.
+  // y is a fraction of the stage height: scene 0 starts above and descends.
   var KEYS = [
-    { rx: -3, ry: -12, rz: -2, size: 0.82, x: 0, y: 0.08 },
-    { rx: 72, ry: -28, rz: 8, size: 0.62, x: 0, y: 0 },
-    { rx: -8, ry: 16, rz: -1, size: 0.43, x: 0.52, y: 0.08 },
-    { rx: 4, ry: -38, rz: 1, size: 0.78, x: -0.38, y: -0.2 },
-    { rx: -12, ry: 5, rz: -2, size: 0.92, x: 0.48, y: 0.08 },
-    { rx: 78, ry: 180, rz: -4, size: 0.7, x: 0, y: 0.72 }
+    { rx: -4, ry: -14, rz: -2, size: 0.8, x: 0, y: -0.85, open: 0, turn: 0 },
+    { rx: 6, ry: -16, rz: 0, size: 0.82, x: 0, y: 0, open: 0, turn: 0 },
+    { rx: 8, ry: 14, rz: 0, size: 0.8, x: 0.45, y: 0.02, open: 0.5, turn: 0 },
+    { rx: 10, ry: -8, rz: 0, size: 0.72, x: -0.35, y: 0, open: 0.9, turn: 0 },
+    { rx: 12, ry: -2, rz: 0, size: 0.95, x: 0.22, y: 0.02, open: 1, turn: 0.6 },
+    { rx: 10, ry: 0, rz: 0, size: 0.8, x: 0, y: 0.04, open: 1, turn: 1 }
   ];
-  var TALL = [
-    { size: 0.76, y: 0.14 }, { size: 0.54 }, { size: 0.42, x: 0, y: 0.15 },
-    { size: 0.7, x: -0.05, y: -0.1 }, { size: 0.74, x: 0, y: 0.2 }, { size: 0.68, y: 0.82 }
-  ];
+  var TALL = [];
 
   function clamp01(x) { return x <= 0 ? 0 : x > 1 ? 1 : x; }
   function easeInOut(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
@@ -1069,14 +1076,13 @@
     var lag = d < 0 ? delay : 1 - delay;
     return clamp01((0.6 - Math.abs(d) - lag * 0.2) / 0.25);
   }
-  function keyAt(coord, tall) {
+  function keyAt(coord) {
     var i = Math.max(0, Math.min(SCENES - 1, Math.floor(coord)));
     var j = Math.min(SCENES - 1, i + 1);
     var f = coord - i;
-    var a = Object.assign({}, KEYS[i], tall ? TALL[i] : {});
-    var b = Object.assign({}, KEYS[j], tall ? TALL[j] : {});
-    function l(x, y) { return x + (y - x) * f; }
-    return { rx: l(a.rx, b.rx), ry: l(a.ry, b.ry), rz: l(a.rz, b.rz), size: l(a.size, b.size), x: l(a.x, b.x), y: l(a.y, b.y) };
+    var A = KEYS[i], B = KEYS[j];
+    function l(n) { return A[n] + (B[n] - A[n]) * f; }
+    return { rx: l("rx"), ry: l("ry"), rz: l("rz"), size: l("size"), x: l("x"), y: l("y"), open: l("open"), turn: l("turn") };
   }
 
   var pointer = { x: 0, y: 0, tx: 0, ty: 0 };
@@ -1116,14 +1122,16 @@
     var coord = sceneCoord(prog01, SCENES, HOLD);
     var scene = Math.round(coord);
     if (scene !== shownScene) { shownScene = scene; setActive(scene); }
-    var k = keyAt(coord, H > W * 1.05);
+    var k = keyAt(coord);
     pointer.x += (pointer.tx - pointer.x) * (1 - Math.exp(-dt * 4));
     pointer.y += (pointer.ty - pointer.y) * (1 - Math.exp(-dt * 4));
     if (!reduced) { spin += spinVel + dt * 0.025; spinVel *= Math.exp(-dt * 3); }
     else { spin += spinVel; spinVel = 0; }
     var px = reduced ? 0 : pointer.x, py = reduced ? 0 : pointer.y;
     var rotX = k.rx + py * 8, rotY = k.ry + spin * 7 + px * 8, rotZ = k.rz + px * 2;
-    bible.style.transform = "translate(-50%,-50%) translate(" + (k.x * 50) + "px," + (k.y * 50) + "px) scale(" + k.size + ") rotateX(" + rotX + "deg) rotateY(" + rotY + "deg) rotateZ(" + rotZ + "deg)";
+    bible.style.transform = "translate(-50%,-50%) translate(" + (k.x * W * 0.2) + "px," + (k.y * H * 0.5) + "px) scale(" + k.size + ") rotateX(" + rotX + "deg) rotateY(" + rotY + "deg) rotateZ(" + rotZ + "deg)";
+    bible.style.setProperty("--open", String(k.open));
+    bible.style.setProperty("--turn", String(k.turn));
     var gx = (0.5 + k.x / 2) * W, gy = (0.5 - k.y / 2) * H, gr = Math.min(W, H) * k.size * 0.75;
     glow.style.transform = "translate(" + (gx - gr) + "px," + (gy - gr) + "px)";
     glow.style.width = glow.style.height = (gr * 2) + "px";
