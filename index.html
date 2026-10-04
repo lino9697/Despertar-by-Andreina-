@@ -176,8 +176,21 @@
   .db-layer{position:absolute;inset:0;pointer-events:none;}
   .db-stage [data-sc]{opacity:0;}
   .db-grain{position:absolute;inset:0;pointer-events:none;opacity:.06;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");}
-  .db-book-wrap{position:absolute;left:50%;top:50%;width:min(36cqw,42cqh);aspect-ratio:800/780;transform-style:preserve-3d;perspective:1100px;}
-  .db-book-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none;filter:drop-shadow(0 22px 26px rgba(38,36,27,.28));user-select:none;}
+  .db-book-wrap{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d;perspective:1400px;--bw:min(24cqw,33cqh);--bh:calc(var(--bw) * 1.36);--bd:calc(var(--bw) * .17);}
+  .db-book{position:absolute;left:0;top:0;width:0;height:0;transform-style:preserve-3d;}
+  .db-face{position:absolute;left:0;top:0;pointer-events:none;backface-visibility:visible;}
+  .db-cover-f{width:var(--bw);height:var(--bh);transform:translate(-50%,-50%) translateZ(calc(var(--bd) / 2));border-radius:3px 9px 9px 3px;overflow:hidden;background:#3a2a22;box-shadow:inset 0 0 0 1px rgba(200,165,93,.35);}
+  .db-cover-f img{width:100%;height:100%;object-fit:cover;display:block;}
+  .db-cover-f::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,240,210,.14) 0%,transparent 34%,transparent 70%,rgba(0,0,0,.22) 100%);pointer-events:none;}
+  .db-cover-b{width:var(--bw);height:var(--bh);transform:translate(-50%,-50%) rotateY(180deg) translateZ(calc(var(--bd) / 2));border-radius:3px 9px 9px 3px;background:linear-gradient(135deg,#3a2a22,#24180f 70%,#2e2019);}
+  .db-spine{width:var(--bd);height:var(--bh);transform:translate(-50%,-50%) rotateY(-90deg) translateZ(calc(var(--bw) / 2));background:linear-gradient(90deg,#2a1c14,#4a3224 45%,#2a1c14);box-shadow:inset 0 0 0 1px rgba(200,165,93,.25);}
+  .db-spine::before,.db-spine::after{content:"";position:absolute;left:0;right:0;height:1px;background:rgba(200,165,93,.6);}
+  .db-spine::before{top:14%;}
+  .db-spine::after{bottom:14%;}
+  .db-pages-r{width:calc(var(--bd) * .9);height:calc(var(--bh) * .96);transform:translate(-50%,-50%) rotateY(90deg) translateZ(calc(var(--bw) / 2 - 4px));background:repeating-linear-gradient(180deg,#f1e6c9 0 2px,#c9b78e 2px 3px);}
+  .db-pages-t{width:var(--bw);height:calc(var(--bd) * .9);transform:translate(-50%,-50%) rotateX(90deg) translateZ(calc(var(--bh) / 2 - 4px));background:repeating-linear-gradient(90deg,#f1e6c9 0 2px,#c9b78e 2px 3px);}
+  .db-pages-u{width:var(--bw);height:calc(var(--bd) * .9);transform:translate(-50%,-50%) rotateX(-90deg) translateZ(calc(var(--bh) / 2 - 4px));background:repeating-linear-gradient(90deg,#f1e6c9 0 2px,#c9b78e 2px 3px);}
+  .db-shadow{position:absolute;left:50%;top:50%;width:min(30cqw,40cqh);height:min(6cqw,8cqh);transform:translate(-50%,calc(min(16cqw,22cqh) * 0.9));border-radius:50%;background:radial-gradient(closest-side,rgba(38,36,27,.32),transparent);filter:blur(6px);pointer-events:none;}
   .db-row-top{position:absolute;left:5cqw;right:5cqw;top:5cqh;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;}
   .db-brand-title{font-family:var(--font-d);font-size:clamp(25px,4cqw,58px);line-height:.82;letter-spacing:.02em;text-transform:uppercase;}
   .db-brand-title span{font-size:.58em;text-transform:none;}
@@ -495,8 +508,16 @@
       <div class="db-vignette" aria-hidden="true"></div>
       <div class="db-glow" data-glow aria-hidden="true"></div>
 
+      <div class="db-shadow" aria-hidden="true"></div>
       <div class="db-book-wrap" data-bible aria-hidden="true">
-        <img class="db-book-photo" src="images/bible-book.webp" alt="" width="800" height="780" draggable="false">
+        <div class="db-book">
+          <div class="db-face db-cover-f"><img src="images/bible-cover.jpg" alt="" draggable="false"></div>
+          <div class="db-face db-cover-b"></div>
+          <div class="db-face db-spine"></div>
+          <div class="db-face db-pages-r"></div>
+          <div class="db-face db-pages-t"></div>
+          <div class="db-face db-pages-u"></div>
+        </div>
       </div>
 
       <!-- 0 · apertura -->
