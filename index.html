@@ -176,17 +176,8 @@
   .db-layer{position:absolute;inset:0;pointer-events:none;}
   .db-stage [data-sc]{opacity:0;}
   .db-grain{position:absolute;inset:0;pointer-events:none;opacity:.06;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");}
-  .db-book-wrap{position:absolute;left:50%;top:50%;transform-style:preserve-3d;}
-  .db-book{position:absolute;left:50%;top:50%;width:min(30cqw,34cqh);height:min(22cqw,28cqh);transform:translate(-50%,-50%);transform-style:preserve-3d;perspective:1100px;pointer-events:none;filter:drop-shadow(0 22px 26px rgba(38,36,27,.28));}
-  .db-book > div{position:absolute;}
-  .db-pages{inset:5% 4%;background:repeating-linear-gradient(90deg,#d9c9a4 0,#f0e4c5 2px,#c9b88f 3px,#eee0bd 5px);border-radius:2px 7px 7px 2px;transform:translateZ(-9px);box-shadow:inset 10px 0 14px rgba(70,45,20,.2);}
-  .db-back{inset:0;border-radius:3px 11px 11px 3px;background:linear-gradient(135deg,#30231d,#5a4030 28%,#211713 75%,#473025);border:1px solid #9d7b4d;transform:translateZ(-13px);box-shadow:inset 0 0 20px rgba(0,0,0,.55);}
-  .db-front{inset:0;border-radius:3px 11px 11px 3px;background:radial-gradient(circle at 28% 25%,rgba(167,119,70,.32),transparent 22%),linear-gradient(145deg,#6a4b35,#2d201b 60%,#523724);border:1px solid #b18a54;transform:translateZ(4px);box-shadow:inset 0 0 0 5px rgba(21,13,10,.3),inset 0 0 0 7px rgba(186,145,82,.18);overflow:hidden;}
-  .db-band{inset:9%;border:1px solid rgba(200,165,93,.5);box-shadow:inset 0 0 0 1px rgba(200,165,93,.16);}
-  .db-ring{left:50%;top:50%;transform:translate(-50%,-50%);width:34%;aspect-ratio:1;border:1px solid #c8a55d;border-radius:50%;opacity:.7;}
-  .db-star{left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--font-d);color:#d8bd82;font-size:clamp(18px,3cqw,40px);}
-  .db-cover-word{left:50%;bottom:9%;transform:translateX(-50%);color:#d8bd82;font-family:var(--font-b);font-size:clamp(6px,.6cqw,9px);letter-spacing:.32em;white-space:nowrap;}
-  .db-spine{left:-3%;top:4%;width:7%;height:92%;border-radius:3px;background:linear-gradient(90deg,#1c120e,#725238,#241813);transform:translateZ(-1px);}
+  .db-book-wrap{position:absolute;left:50%;top:50%;width:min(36cqw,42cqh);aspect-ratio:800/780;transform-style:preserve-3d;perspective:1100px;}
+  .db-book-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none;filter:drop-shadow(0 22px 26px rgba(38,36,27,.28));user-select:none;}
   .db-row-top{position:absolute;left:5cqw;right:5cqw;top:5cqh;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;}
   .db-brand-title{font-family:var(--font-d);font-size:clamp(25px,4cqw,58px);line-height:.82;letter-spacing:.02em;text-transform:uppercase;}
   .db-brand-title span{font-size:.58em;text-transform:none;}
@@ -505,17 +496,7 @@
       <div class="db-glow" data-glow aria-hidden="true"></div>
 
       <div class="db-book-wrap" data-bible aria-hidden="true">
-        <div class="db-book">
-          <div class="db-pages"></div>
-          <div class="db-back"></div>
-          <div class="db-front">
-            <div class="db-band"></div>
-            <div class="db-ring"></div>
-            <div class="db-star">✦</div>
-            <div class="db-cover-word">DESPERTAR</div>
-          </div>
-          <div class="db-spine"></div>
-        </div>
+        <img class="db-book-photo" src="images/bible-book.webp" alt="" width="800" height="780" draggable="false">
       </div>
 
       <!-- 0 · apertura -->
