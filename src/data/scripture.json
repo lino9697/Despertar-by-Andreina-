@@ -1,0 +1,1474 @@
+[
+ {
+  "id": "psalm34",
+  "chapter": 34,
+  "verses": [
+   18
+  ],
+  "book": {
+   "en": "Psalms",
+   "es": "Salmos"
+  },
+  "text": {
+   "en": [
+    {
+     "n": 1,
+     "t": "I will bless the Lord at all times: his praise shall continually be in my mouth."
+    },
+    {
+     "n": 2,
+     "t": "My soul shall make her boast in the Lord: the humble shall hear thereof, and be glad."
+    },
+    {
+     "n": 3,
+     "t": "O magnify the Lord with me, and let us exalt his name together."
+    },
+    {
+     "n": 4,
+     "t": "I sought the Lord, and he heard me, and delivered me from all my fears."
+    },
+    {
+     "n": 5,
+     "t": "They looked unto him, and were lightened: and their faces were not ashamed."
+    },
+    {
+     "n": 6,
+     "t": "This poor man cried, and the Lord heard him, and saved him out of all his troubles."
+    },
+    {
+     "n": 7,
+     "t": "The angel of the Lord encampeth round about them that fear him, and delivereth them."
+    },
+    {
+     "n": 8,
+     "t": "O taste and see that the Lord is good: blessed is the man that trusteth in him."
+    },
+    {
+     "n": 9,
+     "t": "O fear the Lord, ye his saints: for there is no want to them that fear him."
+    },
+    {
+     "n": 10,
+     "t": "The young lions do lack, and suffer hunger: but they that seek the Lord shall not want any good thing."
+    },
+    {
+     "n": 11,
+     "t": "Come, ye children, hearken unto me: I will teach you the fear of the Lord."
+    },
+    {
+     "n": 12,
+     "t": "What man is he that desireth life, and loveth many days, that he may see good?"
+    },
+    {
+     "n": 13,
+     "t": "Keep thy tongue from evil, and thy lips from speaking guile."
+    },
+    {
+     "n": 14,
+     "t": "Depart from evil, and do good; seek peace, and pursue it."
+    },
+    {
+     "n": 15,
+     "t": "The eyes of the Lord are upon the righteous, and his ears are open unto their cry."
+    },
+    {
+     "n": 16,
+     "t": "The face of the Lord is against them that do evil, to cut off the remembrance of them from the earth."
+    },
+    {
+     "n": 17,
+     "t": "The righteous cry, and the Lord heareth, and delivereth them out of all their troubles."
+    },
+    {
+     "n": 18,
+     "t": "The Lord is nigh unto them that are of a broken heart; and saveth such as be of a contrite spirit."
+    },
+    {
+     "n": 19,
+     "t": "Many are the afflictions of the righteous: but the Lord delivereth him out of them all."
+    },
+    {
+     "n": 20,
+     "t": "He keepeth all his bones: not one of them is broken."
+    },
+    {
+     "n": 21,
+     "t": "Evil shall slay the wicked: and they that hate the righteous shall be desolate."
+    },
+    {
+     "n": 22,
+     "t": "The Lord redeemeth the soul of his servants: and none of them that trust in him shall be desolate."
+    }
+   ],
+   "es": [
+    {
+     "n": 1,
+     "t": "BENDECIRÉ á Jehová en todo tiempo; su alabanza será siempre en mi boca."
+    },
+    {
+     "n": 2,
+     "t": "En Jehová se gloriará mi alma: oiránlo los mansos, y se alegrarán."
+    },
+    {
+     "n": 3,
+     "t": "Engrandeced á Jehová conmigo, y ensalcemos su nombre á una."
+    },
+    {
+     "n": 4,
+     "t": "Busqué á Jehová, y él me oyó, y libróme de todos mis temores."
+    },
+    {
+     "n": 5,
+     "t": "A él miraron y fueron alumbrados: y sus rostros no se avergonzaron."
+    },
+    {
+     "n": 6,
+     "t": "Este pobre clamó, y oyóle Jehová, y librólo de todas sus angustias."
+    },
+    {
+     "n": 7,
+     "t": "El ángel de Jehová acampa en derredor de los que le temen, y los defiende."
+    },
+    {
+     "n": 8,
+     "t": "Gustad, y ved que es bueno Jehová: dichoso el hombre que confiará en él."
+    },
+    {
+     "n": 9,
+     "t": "Temed á Jehová, vosotros sus santos; porque no hay falta para los que le temen."
+    },
+    {
+     "n": 10,
+     "t": "Los leoncillos necesitaron, y tuvieron hambre; pero los que buscan á Jehová, no tendrán falta de ningún bien."
+    },
+    {
+     "n": 11,
+     "t": "Venid, hijos, oidme; el temor de Jehová os enseñaré."
+    },
+    {
+     "n": 12,
+     "t": "¿Quién es el hombre que desea vida, que codicia días para ver bien?"
+    },
+    {
+     "n": 13,
+     "t": "Guarda tu lengua de mal, y tus labios de hablar engaño."
+    },
+    {
+     "n": 14,
+     "t": "Apártate del mal, y haz el bien; busca la paz, y síguela."
+    },
+    {
+     "n": 15,
+     "t": "Los ojos de Jehová están sobre los justos, y atentos sus oídos al clamor de ellos."
+    },
+    {
+     "n": 16,
+     "t": "La ira de Jehová contra los que mal hacen, para cortar de la tierra la memoria de ellos."
+    },
+    {
+     "n": 17,
+     "t": "Clamaron los justos, y Jehová oyó, y librólos de todas sus angustias."
+    },
+    {
+     "n": 18,
+     "t": "Cercano está Jehová á los quebrantados de corazón; y salvará á los contritos de espíritu."
+    },
+    {
+     "n": 19,
+     "t": "Muchos son los males del justo; mas de todos ellos lo librará Jehová."
+    },
+    {
+     "n": 20,
+     "t": "El guarda todos sus huesos; ni uno de ellos será quebrantado."
+    },
+    {
+     "n": 21,
+     "t": "Matará al malo la maldad; y los que aborrecen al justo serán asolados."
+    },
+    {
+     "n": 22,
+     "t": "Jehová redime el alma de sus siervos; y no serán asolados cuantos en él confían."
+    }
+   ]
+  }
+ },
+ {
+  "id": "proverbs3",
+  "chapter": 3,
+  "verses": [
+   5,
+   6
+  ],
+  "book": {
+   "en": "Proverbs",
+   "es": "Proverbios"
+  },
+  "text": {
+   "en": [
+    {
+     "n": 1,
+     "t": "My son, forget not my law; but let thine heart keep my commandments:"
+    },
+    {
+     "n": 2,
+     "t": "For length of days, and long life, and peace, shall they add to thee."
+    },
+    {
+     "n": 3,
+     "t": "Let not mercy and truth forsake thee: bind them about thy neck; write them upon the table of thine heart:"
+    },
+    {
+     "n": 4,
+     "t": "So shalt thou find favour and good understanding in the sight of God and man."
+    },
+    {
+     "n": 5,
+     "t": "Trust in the Lord with all thine heart; and lean not unto thine own understanding."
+    },
+    {
+     "n": 6,
+     "t": "In all thy ways acknowledge him, and he shall direct thy paths."
+    },
+    {
+     "n": 7,
+     "t": "Be not wise in thine own eyes: fear the Lord, and depart from evil."
+    },
+    {
+     "n": 8,
+     "t": "It shall be health to thy navel, and marrow to thy bones."
+    },
+    {
+     "n": 9,
+     "t": "Honour the Lord with thy substance, and with the firstfruits of all thine increase:"
+    },
+    {
+     "n": 10,
+     "t": "So shall thy barns be filled with plenty, and thy presses shall burst out with new wine."
+    },
+    {
+     "n": 11,
+     "t": "My son, despise not the chastening of the Lord; neither be weary of his correction:"
+    },
+    {
+     "n": 12,
+     "t": "For whom the Lord loveth he correcteth; even as a father the son in whom he delighteth."
+    },
+    {
+     "n": 13,
+     "t": "Happy is the man that findeth wisdom, and the man that getteth understanding."
+    },
+    {
+     "n": 14,
+     "t": "For the merchandise of it is better than the merchandise of silver, and the gain thereof than fine gold."
+    },
+    {
+     "n": 15,
+     "t": "She is more precious than rubies: and all the things thou canst desire are not to be compared unto her."
+    },
+    {
+     "n": 16,
+     "t": "Length of days is in her right hand; and in her left hand riches and honour."
+    },
+    {
+     "n": 17,
+     "t": "Her ways are ways of pleasantness, and all her paths are peace."
+    },
+    {
+     "n": 18,
+     "t": "She is a tree of life to them that lay hold upon her: and happy is every one that retaineth her."
+    },
+    {
+     "n": 19,
+     "t": "The Lord by wisdom hath founded the earth; by understanding hath he established the heavens."
+    },
+    {
+     "n": 20,
+     "t": "By his knowledge the depths are broken up, and the clouds drop down the dew."
+    },
+    {
+     "n": 21,
+     "t": "My son, let not them depart from thine eyes: keep sound wisdom and discretion:"
+    },
+    {
+     "n": 22,
+     "t": "So shall they be life unto thy soul, and grace to thy neck."
+    },
+    {
+     "n": 23,
+     "t": "Then shalt thou walk in thy way safely, and thy foot shall not stumble."
+    },
+    {
+     "n": 24,
+     "t": "When thou liest down, thou shalt not be afraid: yea, thou shalt lie down, and thy sleep shall be sweet."
+    },
+    {
+     "n": 25,
+     "t": "Be not afraid of sudden fear, neither of the desolation of the wicked, when it cometh."
+    },
+    {
+     "n": 26,
+     "t": "For the Lord shall be thy confidence, and shall keep thy foot from being taken."
+    },
+    {
+     "n": 27,
+     "t": "Withhold not good from them to whom it is due, when it is in the power of thine hand to do it."
+    },
+    {
+     "n": 28,
+     "t": "Say not unto thy neighbour, Go, and come again, and to morrow I will give; when thou hast it by thee."
+    },
+    {
+     "n": 29,
+     "t": "Devise not evil against thy neighbour, seeing he dwelleth securely by thee."
+    },
+    {
+     "n": 30,
+     "t": "Strive not with a man without cause, if he have done thee no harm."
+    },
+    {
+     "n": 31,
+     "t": "Envy thou not the oppressor, and choose none of his ways."
+    },
+    {
+     "n": 32,
+     "t": "For the froward is abomination to the Lord: but his secret is with the righteous."
+    },
+    {
+     "n": 33,
+     "t": "The curse of the Lord is in the house of the wicked: but he blesseth the habitation of the just."
+    },
+    {
+     "n": 34,
+     "t": "Surely he scorneth the scorners: but he giveth grace unto the lowly."
+    },
+    {
+     "n": 35,
+     "t": "The wise shall inherit glory: but shame shall be the promotion of fools."
+    }
+   ],
+   "es": [
+    {
+     "n": 1,
+     "t": "HIJO mío, no te olvides de mi ley; y tu corazón guarde mis mandamientos:"
+    },
+    {
+     "n": 2,
+     "t": "Porque largura de días, y años de vida y paz te aumentarán."
+    },
+    {
+     "n": 3,
+     "t": "Misericordia y verdad no te desamparen; átalas á tu cuello, escríbelas en la tabla de tu corazón:"
+    },
+    {
+     "n": 4,
+     "t": "Y hallarás gracia y buena opinión en los ojos de Dios y de los hombres."
+    },
+    {
+     "n": 5,
+     "t": "Fíate de Jehová de todo tu corazón, y no estribes en tu prudencia."
+    },
+    {
+     "n": 6,
+     "t": "Reconócelo en todos tus caminos, y él enderezará tus veredas."
+    },
+    {
+     "n": 7,
+     "t": "No seas sabio en tu opinión: teme á Jehová, y apártate del mal;"
+    },
+    {
+     "n": 8,
+     "t": "Porque será medicina á tu ombligo, y tuétano á tus huesos."
+    },
+    {
+     "n": 9,
+     "t": "Honra á Jehová de tu sustancia, y de las primicias de todos tus frutos;"
+    },
+    {
+     "n": 10,
+     "t": "Y serán llenas tus trojes con abundancia, y tus lagares rebosarán de mosto."
+    },
+    {
+     "n": 11,
+     "t": "No deseches, hijo mío, el castigo de Jehová; ni te fatigues de su corrección:"
+    },
+    {
+     "n": 12,
+     "t": "Porque al que ama castiga, como el padre al hijo á quien quiere."
+    },
+    {
+     "n": 13,
+     "t": "Bienaventurado el hombre que halla la sabiduría, y que obtiene la inteligencia:"
+    },
+    {
+     "n": 14,
+     "t": "Porque su mercadería es mejor que la mercadería de la plata, y sus frutos más que el oro fino."
+    },
+    {
+     "n": 15,
+     "t": "Más preciosa es que las piedras preciosas; y todo lo que puedes desear, no se puede comparar á ella."
+    },
+    {
+     "n": 16,
+     "t": "Largura de días está en su mano derecha; en su izquierda riquezas y honra."
+    },
+    {
+     "n": 17,
+     "t": "Sus caminos son caminos deleitosos, y todas sus veredas paz."
+    },
+    {
+     "n": 18,
+     "t": "Ella es árbol de vida á los que de ella asen: y bienaventurados son los que la mantienen."
+    },
+    {
+     "n": 19,
+     "t": "Jehová con sabiduría fundó la tierra; afirmó los cielos con inteligencia."
+    },
+    {
+     "n": 20,
+     "t": "Con su ciencia se partieron los abismos, y destilan el rocío los cielos."
+    },
+    {
+     "n": 21,
+     "t": "Hijo mío, no se aparten estas cosas de tus ojos; guarda la ley y el consejo;"
+    },
+    {
+     "n": 22,
+     "t": "Y serán vida á tu alma, y gracia á tu cuello."
+    },
+    {
+     "n": 23,
+     "t": "Entonces andarás por tu camino confiadamente, y tu pie no tropezará."
+    },
+    {
+     "n": 24,
+     "t": "Cuando te acostares, no tendrás temor; antes te acostarás, y tu sueño será suave."
+    },
+    {
+     "n": 25,
+     "t": "No tendrás temor de pavor repentino, ni de la ruina de los impíos cuando viniere:"
+    },
+    {
+     "n": 26,
+     "t": "Porque Jehová será tu confianza, y él preservará tu pie de ser preso."
+    },
+    {
+     "n": 27,
+     "t": "No detengas el bien de sus dueños, cuando tuvieres poder para hacerlo."
+    },
+    {
+     "n": 28,
+     "t": "No digas á tu prójimo: Ve, y vuelve, y mañana te daré; cuando tienes contigo qué darle."
+    },
+    {
+     "n": 29,
+     "t": "No intentes mal contra tu prójimo, estando él confiado de ti."
+    },
+    {
+     "n": 30,
+     "t": "No pleitees con alguno sin razón, si él no te ha hecho agravio."
+    },
+    {
+     "n": 31,
+     "t": "No envidies al hombre injusto, ni escojas alguno de sus caminos."
+    },
+    {
+     "n": 32,
+     "t": "Porque el perverso es abominado de Jehová: mas su secreto es con los rectos."
+    },
+    {
+     "n": 33,
+     "t": "La maldición de Jehová está en la casa del impío; mas él bendecirá la morada de los justos."
+    },
+    {
+     "n": 34,
+     "t": "Ciertamente él escarnecerá á los escarnecedores, y á los humildes dará gracia."
+    },
+    {
+     "n": 35,
+     "t": "Los sabios heredarán honra: mas los necios sostendrán ignominia."
+    }
+   ]
+  }
+ },
+ {
+  "id": "isaiah41",
+  "chapter": 41,
+  "verses": [
+   10
+  ],
+  "book": {
+   "en": "Isaiah",
+   "es": "Isaías"
+  },
+  "text": {
+   "en": [
+    {
+     "n": 1,
+     "t": "Keep silence before me, O islands; and let the people renew their strength: let them come near; then let them speak: let us come near together to judgment."
+    },
+    {
+     "n": 2,
+     "t": "Who raised up the righteous man from the east, called him to his foot, gave the nations before him, and made him rule over kings? he gave them as the dust to his sword, and as driven stubble to his bow."
+    },
+    {
+     "n": 3,
+     "t": "He pursued them, and passed safely; even by the way that he had not gone with his feet."
+    },
+    {
+     "n": 4,
+     "t": "Who hath wrought and done it, calling the generations from the beginning? I the Lord, the first, and with the last; I am he."
+    },
+    {
+     "n": 5,
+     "t": "The isles saw it, and feared; the ends of the earth were afraid, drew near, and came."
+    },
+    {
+     "n": 6,
+     "t": "They helped every one his neighbour; and every one said to his brother, Be of good courage."
+    },
+    {
+     "n": 7,
+     "t": "So the carpenter encouraged the goldsmith, and he that smootheth with the hammer him that smote the anvil, saying, It is ready for the sodering: and he fastened it with nails, that it should not be moved."
+    },
+    {
+     "n": 8,
+     "t": "But thou, Israel, art my servant, Jacob whom I have chosen, the seed of Abraham my friend."
+    },
+    {
+     "n": 9,
+     "t": "Thou whom I have taken from the ends of the earth, and called thee from the chief men thereof, and said unto thee, Thou art my servant; I have chosen thee, and not cast thee away."
+    },
+    {
+     "n": 10,
+     "t": "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness."
+    },
+    {
+     "n": 11,
+     "t": "Behold, all they that were incensed against thee shall be ashamed and confounded: they shall be as nothing; and they that strive with thee shall perish."
+    },
+    {
+     "n": 12,
+     "t": "Thou shalt seek them, and shalt not find them, even them that contended with thee: they that war against thee shall be as nothing, and as a thing of nought."
+    },
+    {
+     "n": 13,
+     "t": "For I the Lord thy God will hold thy right hand, saying unto thee, Fear not; I will help thee."
+    },
+    {
+     "n": 14,
+     "t": "Fear not, thou worm Jacob, and ye men of Israel; I will help thee, saith the Lord, and thy redeemer, the Holy One of Israel."
+    },
+    {
+     "n": 15,
+     "t": "Behold, I will make thee a new sharp threshing instrument having teeth: thou shalt thresh the mountains, and beat them small, and shalt make the hills as chaff."
+    },
+    {
+     "n": 16,
+     "t": "Thou shalt fan them, and the wind shall carry them away, and the whirlwind shall scatter them: and thou shalt rejoice in the Lord, and shalt glory in the Holy One of Israel."
+    },
+    {
+     "n": 17,
+     "t": "When the poor and needy seek water, and there is none, and their tongue faileth for thirst, I the Lord will hear them, I the God of Israel will not forsake them."
+    },
+    {
+     "n": 18,
+     "t": "I will open rivers in high places, and fountains in the midst of the valleys: I will make the wilderness a pool of water, and the dry land springs of water."
+    },
+    {
+     "n": 19,
+     "t": "I will plant in the wilderness the cedar, the shittah tree, and the myrtle, and the oil tree; I will set in the desert the fir tree, and the pine, and the box tree together:"
+    },
+    {
+     "n": 20,
+     "t": "That they may see, and know, and consider, and understand together, that the hand of the Lord hath done this, and the Holy One of Israel hath created it."
+    },
+    {
+     "n": 21,
+     "t": "Produce your cause, saith the Lord; bring forth your strong reasons, saith the King of Jacob."
+    },
+    {
+     "n": 22,
+     "t": "Let them bring them forth, and shew us what shall happen: let them shew the former things, what they be, that we may consider them, and know the latter end of them; or declare us things for to come."
+    },
+    {
+     "n": 23,
+     "t": "Shew the things that are to come hereafter, that we may know that ye are gods: yea, do good, or do evil, that we may be dismayed, and behold it together."
+    },
+    {
+     "n": 24,
+     "t": "Behold, ye are of nothing, and your work of nought: an abomination is he that chooseth you."
+    },
+    {
+     "n": 25,
+     "t": "I have raised up one from the north, and he shall come: from the rising of the sun shall he call upon my name: and he shall come upon princes as upon morter, and as the potter treadeth clay."
+    },
+    {
+     "n": 26,
+     "t": "Who hath declared from the beginning, that we may know? and beforetime, that we may say, He is righteous? yea, there is none that sheweth, yea, there is none that declareth, yea, there is none that heareth your words."
+    },
+    {
+     "n": 27,
+     "t": "The first shall say to Zion, Behold, behold them: and I will give to Jerusalem one that bringeth good tidings."
+    },
+    {
+     "n": 28,
+     "t": "For I beheld, and there was no man; even among them, and there was no counsellor, that, when I asked of them, could answer a word."
+    },
+    {
+     "n": 29,
+     "t": "Behold, they are all vanity; their works are nothing: their molten images are wind and confusion."
+    }
+   ],
+   "es": [
+    {
+     "n": 1,
+     "t": "ESCUCHADME, islas, y esfuércense los pueblos; alléguense, y entonces hablen: estemos juntamente á juicio."
+    },
+    {
+     "n": 2,
+     "t": "¿Quién despertó del oriente al justo, lo llamó para que le siguiese, entregó delante de él naciones, é hízolo enseñorear de reyes; entrególos á su espada como polvo, y á su arco como hojarascas arrebatadas?"
+    },
+    {
+     "n": 3,
+     "t": "Siguiólos, pasó en paz por camino por donde sus pies nunca habían entrado."
+    },
+    {
+     "n": 4,
+     "t": "¿Quién obró é hizo esto? ¿Quién llama las generaciones desde el principio? Yo Jehová, el primero, y yo mismo con los postreros."
+    },
+    {
+     "n": 5,
+     "t": "Las islas vieron, y tuvieron temor; los términos de la tierra se espantaron: congregáronse, y vinieron."
+    },
+    {
+     "n": 6,
+     "t": "Cada cual ayudó á su cercano; y á su hermano dijo: Esfuérzate."
+    },
+    {
+     "n": 7,
+     "t": "El carpintero animó al platero, y el que alisa con martillo al que batía en el yunque, diciendo, Buena está la soldadura; y afirmólo con clavos, porque no se moviese."
+    },
+    {
+     "n": 8,
+     "t": "Mas tú, Israel, siervo mío eres; tú, Jacob, á quien yo escogí, simiente de Abraham mi amigo."
+    },
+    {
+     "n": 9,
+     "t": "Porque te tomé de los extremos de la tierra, y de sus principales te llamé, y te dije: Mi siervo eres tú; te escogí, y no te deseché."
+    },
+    {
+     "n": 10,
+     "t": "No temas, que yo soy contigo; no desmayes, que yo soy tu Dios que te esfuerzo: siempre te ayudaré, siempre te sustentaré con la diestra de mi justicia."
+    },
+    {
+     "n": 11,
+     "t": "He aquí que todos los que se airan contra ti, serán avergonzados y confundidos: serán como nada y perecerán, los que contienden contigo."
+    },
+    {
+     "n": 12,
+     "t": "Los buscarás, y no los hallarás, los que tienen contienda contigo; serán como nada, y como cosa que no es, aquellos que te hacen guerra."
+    },
+    {
+     "n": 13,
+     "t": "Porque yo Jehová soy tu Dios, que te ase de tu mano derecha, y te dice: No temas, yo te ayudé."
+    },
+    {
+     "n": 14,
+     "t": "No temas, gusano de Jacob, oh vosotros los pocos de Israel; yo te socorrí, dice Jehová, y tu Redentor el Santo de Israel."
+    },
+    {
+     "n": 15,
+     "t": "He aquí que yo te he puesto por trillo, trillo nuevo, lleno de dientes: trillarás montes y los molerás, y collados tornarás en tamo."
+    },
+    {
+     "n": 16,
+     "t": "Los aventarás, y los llevará el viento, y esparcirálos el torbellino. Tú empero te regocijarás en Jehová, te gloriarás en el Santo de Israel."
+    },
+    {
+     "n": 17,
+     "t": "Los afligidos y menesterosos buscan las aguas, que no hay; secóse de sed su lengua; yo Jehová los oiré, yo el Dios de Israel no los desampararé."
+    },
+    {
+     "n": 18,
+     "t": "En los altos abriré ríos, y fuentes en mitad de los llanos: tornaré el desierto en estanques de aguas, y en manaderos de aguas la tierra seca."
+    },
+    {
+     "n": 19,
+     "t": "Daré en el desierto cedros, espinos, arrayanes, y olivas; pondré en la soledad hayas, olmos, y álamos juntamente;"
+    },
+    {
+     "n": 20,
+     "t": "Porque vean y conozcan, y adviertan y entiendan todos, que la mano de Jehová hace esto, y que el Santo de Israel lo crió."
+    },
+    {
+     "n": 21,
+     "t": "Alegad por vuestra causa, dice Jehová: exhibid vuestros fundamentos, dice el Rey de Jacob."
+    },
+    {
+     "n": 22,
+     "t": "Traigan, y anúnciennos lo que ha de venir: dígannos lo que ha pasado desde el principio, y pondremos nuestro corazón en ello: sepamos también su postrimería, y hacednos entender lo que ha de venir."
+    },
+    {
+     "n": 23,
+     "t": "Dadnos nuevas de lo que ha de ser después, para que sepamos que vosotros sois dioses; ó á lo menos haced bien, ó mal, para que tengamos qué contar, y juntamente nos maravillemos."
+    },
+    {
+     "n": 24,
+     "t": "He aquí que vosotros sois de nada, y vuestras obras de vanidad; abominación el que os escogió."
+    },
+    {
+     "n": 25,
+     "t": "Del norte desperté uno, y vendrá; del nacimiento del sol llamará en mi nombre: y hollará príncipes como lodo, y como pisa el barro el alfarero."
+    },
+    {
+     "n": 26,
+     "t": "¿Quién lo anunció desde el principio, para que sepamos; ó de tiempo atrás, y diremos: Es justo? Cierto, no hay quien anuncie, sí, no hay quien enseñe, ciertamente no hay quien oiga vuestras palabras."
+    },
+    {
+     "n": 27,
+     "t": "Yo soy el primero que he enseñado estas cosas á Sión, y á Jerusalem daré un portador de alegres nuevas."
+    },
+    {
+     "n": 28,
+     "t": "Miré, y no había ninguno; y pregunté de estas cosas, y ningún consejero hubo: preguntéles, y no respondieron palabra."
+    },
+    {
+     "n": 29,
+     "t": "He aquí, todos iniquidad, y las obras de ellos nada: viento y vanidad son sus vaciadizos."
+    }
+   ]
+  }
+ },
+ {
+  "id": "jeremiah29",
+  "chapter": 29,
+  "verses": [
+   11
+  ],
+  "book": {
+   "en": "Jeremiah",
+   "es": "Jeremías"
+  },
+  "text": {
+   "en": [
+    {
+     "n": 1,
+     "t": "Now these are the words of the letter that Jeremiah the prophet sent from Jerusalem unto the residue of the elders which were carried away captives, and to the priests, and to the prophets, and to all the people whom Nebuchadnezzar had carried away captive from Jerusalem to Babylon;"
+    },
+    {
+     "n": 2,
+     "t": "(After that Jeconiah the king, and the queen, and the eunuchs, the princes of Judah and Jerusalem, and the carpenters, and the smiths, were departed from Jerusalem;)"
+    },
+    {
+     "n": 3,
+     "t": "By the hand of Elasah the son of Shaphan, and Gemariah the son of Hilkiah, (whom Zedekiah king of Judah sent unto Babylon to Nebuchadnezzar king of Babylon) saying,"
+    },
+    {
+     "n": 4,
+     "t": "Thus saith the Lord of hosts, the God of Israel, unto all that are carried away captives, whom I have caused to be carried away from Jerusalem unto Babylon;"
+    },
+    {
+     "n": 5,
+     "t": "Build ye houses, and dwell in them; and plant gardens, and eat the fruit of them;"
+    },
+    {
+     "n": 6,
+     "t": "Take ye wives, and beget sons and daughters; and take wives for your sons, and give your daughters to husbands, that they may bear sons and daughters; that ye may be increased there, and not diminished."
+    },
+    {
+     "n": 7,
+     "t": "And seek the peace of the city whither I have caused you to be carried away captives, and pray unto the Lord for it: for in the peace thereof shall ye have peace."
+    },
+    {
+     "n": 8,
+     "t": "For thus saith the Lord of hosts, the God of Israel; Let not your prophets and your diviners, that be in the midst of you, deceive you, neither hearken to your dreams which ye cause to be dreamed."
+    },
+    {
+     "n": 9,
+     "t": "For they prophesy falsely unto you in my name: I have not sent them, saith the Lord."
+    },
+    {
+     "n": 10,
+     "t": "For thus saith the Lord, That after seventy years be accomplished at Babylon I will visit you, and perform my good word toward you, in causing you to return to this place."
+    },
+    {
+     "n": 11,
+     "t": "For I know the thoughts that I think toward you, saith the Lord, thoughts of peace, and not of evil, to give you an expected end."
+    },
+    {
+     "n": 12,
+     "t": "Then shall ye call upon me, and ye shall go and pray unto me, and I will hearken unto you."
+    },
+    {
+     "n": 13,
+     "t": "And ye shall seek me, and find me, when ye shall search for me with all your heart."
+    },
+    {
+     "n": 14,
+     "t": "And I will be found of you, saith the Lord: and I will turn away your captivity, and I will gather you from all the nations, and from all the places whither I have driven you, saith the Lord; and I will bring you again into the place whence I caused you to be carried away captive."
+    },
+    {
+     "n": 15,
+     "t": "Because ye have said, The Lord hath raised us up prophets in Babylon;"
+    },
+    {
+     "n": 16,
+     "t": "Know that thus saith the Lord of the king that sitteth upon the throne of David, and of all the people that dwelleth in this city, and of your brethren that are not gone forth with you into captivity;"
+    },
+    {
+     "n": 17,
+     "t": "Thus saith the Lord of hosts; Behold, I will send upon them the sword, the famine, and the pestilence, and will make them like vile figs, that cannot be eaten, they are so evil."
+    },
+    {
+     "n": 18,
+     "t": "And I will persecute them with the sword, with the famine, and with the pestilence, and will deliver them to be removed to all the kingdoms of the earth, to be a curse, and an astonishment, and an hissing, and a reproach, among all the nations whither I have driven them:"
+    },
+    {
+     "n": 19,
+     "t": "Because they have not hearkened to my words, saith the Lord, which I sent unto them by my servants the prophets, rising up early and sending them; but ye would not hear, saith the Lord."
+    },
+    {
+     "n": 20,
+     "t": "Hear ye therefore the word of the Lord, all ye of the captivity, whom I have sent from Jerusalem to Babylon:"
+    },
+    {
+     "n": 21,
+     "t": "Thus saith the Lord of hosts, the God of Israel, of Ahab the son of Kolaiah, and of Zedekiah the son of Maaseiah, which prophesy a lie unto you in my name; Behold, I will deliver them into the hand of Nebuchadrezzar king of Babylon; and he shall slay them before your eyes;"
+    },
+    {
+     "n": 22,
+     "t": "And of them shall be taken up a curse by all the captivity of Judah which are in Babylon, saying, The Lord make thee like Zedekiah and like Ahab, whom the king of Babylon roasted in the fire;"
+    },
+    {
+     "n": 23,
+     "t": "Because they have committed villany in Israel, and have committed adultery with their neighbours’ wives, and have spoken lying words in my name, which I have not commanded them; even I know, and am a witness, saith the Lord."
+    },
+    {
+     "n": 24,
+     "t": "Thus shalt thou also speak to Shemaiah the Nehelamite, saying,"
+    },
+    {
+     "n": 25,
+     "t": "Thus speaketh the Lord of hosts, the God of Israel, saying, Because thou hast sent letters in thy name unto all the people that are at Jerusalem, and to Zephaniah the son of Maaseiah the priest, and to all the priests, saying,"
+    },
+    {
+     "n": 26,
+     "t": "The Lord hath made thee priest in the stead of Jehoiada the priest, that ye should be officers in the house of the Lord, for every man that is mad, and maketh himself a prophet, that thou shouldest put him in prison, and in the stocks."
+    },
+    {
+     "n": 27,
+     "t": "Now therefore why hast thou not reproved Jeremiah of Anathoth, which maketh himself a prophet to you?"
+    },
+    {
+     "n": 28,
+     "t": "For therefore he sent unto us in Babylon, saying, This captivity is long: build ye houses, and dwell in them; and plant gardens, and eat the fruit of them."
+    },
+    {
+     "n": 29,
+     "t": "And Zephaniah the priest read this letter in the ears of Jeremiah the prophet."
+    },
+    {
+     "n": 30,
+     "t": "Then came the word of the Lord unto Jeremiah, saying,"
+    },
+    {
+     "n": 31,
+     "t": "Send to all them of the captivity, saying, Thus saith the Lord concerning Shemaiah the Nehelamite; Because that Shemaiah hath prophesied unto you, and I sent him not, and he caused you to trust in a lie:"
+    },
+    {
+     "n": 32,
+     "t": "Therefore thus saith the Lord; Behold, I will punish Shemaiah the Nehelamite, and his seed: he shall not have a man to dwell among this people; neither shall he behold the good that I will do for my people, saith the Lord; because he hath taught rebellion against the Lord."
+    }
+   ],
+   "es": [
+    {
+     "n": 1,
+     "t": "Y ESTAS son las palabras de la carta que Jeremías profeta envió de Jerusalem á los ancianos que habían quedado de los trasportados, y á los sacerdotes y profetas, y á todo el pueblo que Nabucodonosor llevó cautivo de Jerusalem á Babilonia:"
+    },
+    {
+     "n": 2,
+     "t": "(Después que salió el rey Jechônías y la reina, y los de palacio, y los príncipes de Judá y de Jerusalem, y los artífices, y los ingenieros de Jerusalem;)"
+    },
+    {
+     "n": 3,
+     "t": "Por mano de Elasa hijo de Saphán, y de Jemarías hijo de Hilcías, (los cuales envió Sedechîas rey de Judá á Babilonia, á Nabucodonosor rey de Babilonia,) diciendo:"
+    },
+    {
+     "n": 4,
+     "t": "Así ha dicho Jehová de los ejércitos, Dios de Israel, á todos los de la cautividad que hice trasportar de Jerusalem á Babilonia:"
+    },
+    {
+     "n": 5,
+     "t": "Edificad casas, y morad; y plantad huertos, y comed del fruto de ellos;"
+    },
+    {
+     "n": 6,
+     "t": "Casaos, y engendrad hijos é hijas; dad mujeres á vuestros hijos, y dad maridos á vuestras hijas, para que paran hijos é hijas; y multiplicaos ahí, y no os hagáis pocos."
+    },
+    {
+     "n": 7,
+     "t": "Y procurad la paz de la ciudad á la cual os hice traspasar, y rogad por ella á Jehová; porque en su paz tendréis vosotros paz."
+    },
+    {
+     "n": 8,
+     "t": "Porque así ha dicho Jehová de los ejércitos, Dios de Israel: No os engañen vuestros profetas que están entre vosotros, ni vuestros adivinos; ni miréis á vuestros sueños que soñáis."
+    },
+    {
+     "n": 9,
+     "t": "Porque falsamente os profetizan ellos en mi nombre: no los envié, ha dicho Jehová."
+    },
+    {
+     "n": 10,
+     "t": "Porque así dijo Jehová: Cuando en Babilonia se cumplieren los setenta años, yo os visitaré, y despertaré sobre vosotros mi buena palabra, para tornaros á este lugar."
+    },
+    {
+     "n": 11,
+     "t": "Porque yo sé los pensamientos que tengo acerca de vosotros, dice Jehová, pensamientos de paz, y no de mal, para daros el fin que esperáis."
+    },
+    {
+     "n": 12,
+     "t": "Entonces me invocaréis, é iréis y oraréis á mí, y yo os oiré:"
+    },
+    {
+     "n": 13,
+     "t": "Y me buscaréis y hallaréis, porque me buscaréis de todo vuestro corazón."
+    },
+    {
+     "n": 14,
+     "t": "Y seré hallado de vosotros, dice Jehová, y tornaré vuestra cautividad, y os juntaré de todas las gentes, y de todos los lugares adonde os arrojé, dice Jehová; y os haré volver al lugar de donde os hice ser llevados."
+    },
+    {
+     "n": 15,
+     "t": "Mas habéis dicho: Jehová nos ha suscitado profetas en Babilonia."
+    },
+    {
+     "n": 16,
+     "t": "Así empero ha dicho Jehová, del rey que está sentado sobre el trono de David, y de todo el pueblo que mora en esta ciudad, de vuestros hermanos que no salieron con vosotros en cautiverio;"
+    },
+    {
+     "n": 17,
+     "t": "Así ha dicho Jehová de los ejércitos: He aquí envío yo contra ellos cuchillo, hambre, y pestilencia, y pondrélos como los malos higos, que de malos no se pueden comer."
+    },
+    {
+     "n": 18,
+     "t": "Y perseguirélos con espada, con hambre y con pestilencia; y darélos por escarnio á todos los reinos de la tierra, por maldición y por espanto, y por silbo y por afrenta á todas la gentes á las cuales los habré arrojado;"
+    },
+    {
+     "n": 19,
+     "t": "Porque no oyeron mis palabras, dice Jehová, que les envié por mis siervos los profetas, madrugando en enviarlos; y no habéis escuchado, dice Jehová."
+    },
+    {
+     "n": 20,
+     "t": "Oid pues palabra de Jehová, vosotros todos los trasportados que eché de Jerusalem á Babilonia."
+    },
+    {
+     "n": 21,
+     "t": "Así ha dicho Jehová de los ejércitos, Dios de Israel, acerca de Achâb hijo de Colías, y acerca de Sedechîas hijo de Maasías, quienes os profetizan en mi nombre falsamente: He aquí los entrego yo en mano de Nabucodonosor rey de Babilonia, y él los herirá delante de vuestro ojos;"
+    },
+    {
+     "n": 22,
+     "t": "Y todos los trasportados de Judá que están en Babilonia, tomarán de ellos maldición, diciendo: Póngate Jehová como á Sedechîas y como á Achâb, los cuales asó al fuego el rey de Babilonia."
+    },
+    {
+     "n": 23,
+     "t": "Porque hicieron maldad en Israel, y cometieron adulterio con las mujeres de sus prójimos, y falsamente hablaron en mi nombre palabra que no les mandé; lo cual yo sé, y soy testigo, dice Jehová."
+    },
+    {
+     "n": 24,
+     "t": "Y á Semaías de Nehelam hablarás, diciendo:"
+    },
+    {
+     "n": 25,
+     "t": "Así habló Jehová de los ejércitos, Dios de Israel, diciendo: Por cuanto enviaste letras en tu nombre á todo el pueblo que está en Jerusalem, y á Sophonías sacerdote hijo de Maasías, y á todos los sacerdotes, diciendo:"
+    },
+    {
+     "n": 26,
+     "t": "Jehová te ha puesto por sacerdote en lugar de Joiada sacerdote, para que presidáis en la casa de Jehová sobre todo hombre furioso y profetizante, poniéndolo en el calabozo y en el cepo."
+    },
+    {
+     "n": 27,
+     "t": "¿Por qué pues no has ahora reprendido á Jeremías de Anathoth, que os profetiza falsamente?"
+    },
+    {
+     "n": 28,
+     "t": "Porque por eso nos envió á decir en Babilonia: Largo va el cautiverio: edificad casas, y morad; plantad huertos, y comed el fruto de ellos."
+    },
+    {
+     "n": 29,
+     "t": "Y Sophonías sacerdote había leído esta carta á oídos de Jeremías profeta."
+    },
+    {
+     "n": 30,
+     "t": "Y fué palabra de Jehová á Jeremías, diciendo:"
+    },
+    {
+     "n": 31,
+     "t": "Envía á decir á toda la transmigración: Así ha dicho Jehová de Semaías de Nehelam: Porque os profetizó Semaías, y yo no lo envié, y os hizo confiar en mentira:"
+    },
+    {
+     "n": 32,
+     "t": "Por tanto, así ha dicho Jehová: He aquí que yo visito sobre Semaías de Nehelam, y sobre su generación: no tendrá varón que more entre este pueblo, ni verá aquel bien que haré yo á mi pueblo, dice Jehová: porque contra Jehová ha hablado rebelión."
+    }
+   ]
+  }
+ },
+ {
+  "id": "matthew11",
+  "chapter": 11,
+  "verses": [
+   28
+  ],
+  "book": {
+   "en": "Matthew",
+   "es": "Mateo"
+  },
+  "text": {
+   "en": [
+    {
+     "n": 1,
+     "t": "And it came to pass, when Jesus had made an end of commanding his twelve disciples, he departed thence to teach and to preach in their cities."
+    },
+    {
+     "n": 2,
+     "t": "Now when John had heard in the prison the works of Christ, he sent two of his disciples,"
+    },
+    {
+     "n": 3,
+     "t": "And said unto him, Art thou he that should come, or do we look for another?"
+    },
+    {
+     "n": 4,
+     "t": "Jesus answered and said unto them, Go and shew John again those things which ye do hear and see:"
+    },
+    {
+     "n": 5,
+     "t": "The blind receive their sight, and the lame walk, the lepers are cleansed, and the deaf hear, the dead are raised up, and the poor have the gospel preached to them."
+    },
+    {
+     "n": 6,
+     "t": "And blessed is he, whosoever shall not be offended in me."
+    },
+    {
+     "n": 7,
+     "t": "And as they departed, Jesus began to say unto the multitudes concerning John, What went ye out into the wilderness to see? A reed shaken with the wind?"
+    },
+    {
+     "n": 8,
+     "t": "But what went ye out for to see? A man clothed in soft raiment? behold, they that wear soft clothing are in kings’ houses."
+    },
+    {
+     "n": 9,
+     "t": "But what went ye out for to see? A prophet? yea, I say unto you, and more than a prophet."
+    },
+    {
+     "n": 10,
+     "t": "For this is he, of whom it is written, Behold, I send my messenger before thy face, which shall prepare thy way before thee."
+    },
+    {
+     "n": 11,
+     "t": "Verily I say unto you, Among them that are born of women there hath not risen a greater than John the Baptist: notwithstanding he that is least in the kingdom of heaven is greater than he."
+    },
+    {
+     "n": 12,
+     "t": "And from the days of John the Baptist until now the kingdom of heaven suffereth violence, and the violent take it by force."
+    },
+    {
+     "n": 13,
+     "t": "For all the prophets and the law prophesied until John."
+    },
+    {
+     "n": 14,
+     "t": "And if ye will receive it, this is Elias, which was for to come."
+    },
+    {
+     "n": 15,
+     "t": "He that hath ears to hear, let him hear."
+    },
+    {
+     "n": 16,
+     "t": "But whereunto shall I liken this generation? It is like unto children sitting in the markets, and calling unto their fellows,"
+    },
+    {
+     "n": 17,
+     "t": "And saying, We have piped unto you, and ye have not danced; we have mourned unto you, and ye have not lamented."
+    },
+    {
+     "n": 18,
+     "t": "For John came neither eating nor drinking, and they say, He hath a devil."
+    },
+    {
+     "n": 19,
+     "t": "The Son of man came eating and drinking, and they say, Behold a man gluttonous, and a winebibber, a friend of publicans and sinners. But wisdom is justified of her children."
+    },
+    {
+     "n": 20,
+     "t": "Then began he to upbraid the cities wherein most of his mighty works were done, because they repented not:"
+    },
+    {
+     "n": 21,
+     "t": "Woe unto thee, Chorazin! woe unto thee, Bethsaida! for if the mighty works, which were done in you, had been done in Tyre and Sidon, they would have repented long ago in sackcloth and ashes."
+    },
+    {
+     "n": 22,
+     "t": "But I say unto you, It shall be more tolerable for Tyre and Sidon at the day of judgment, than for you."
+    },
+    {
+     "n": 23,
+     "t": "And thou, Capernaum, which art exalted unto heaven, shalt be brought down to hell: for if the mighty works, which have been done in thee, had been done in Sodom, it would have remained until this day."
+    },
+    {
+     "n": 24,
+     "t": "But I say unto you, That it shall be more tolerable for the land of Sodom in the day of judgment, than for thee."
+    },
+    {
+     "n": 25,
+     "t": "At that time Jesus answered and said, I thank thee, O Father, Lord of heaven and earth, because thou hast hid these things from the wise and prudent, and hast revealed them unto babes."
+    },
+    {
+     "n": 26,
+     "t": "Even so, Father: for so it seemed good in thy sight."
+    },
+    {
+     "n": 27,
+     "t": "All things are delivered unto me of my Father: and no man knoweth the Son, but the Father; neither knoweth any man the Father, save the Son, and he to whomsoever the Son will reveal him."
+    },
+    {
+     "n": 28,
+     "t": "Come unto me, all ye that labour and are heavy laden, and I will give you rest."
+    },
+    {
+     "n": 29,
+     "t": "Take my yoke upon you, and learn of me; for I am meek and lowly in heart: and ye shall find rest unto your souls."
+    },
+    {
+     "n": 30,
+     "t": "For my yoke is easy, and my burden is light."
+    }
+   ],
+   "es": [
+    {
+     "n": 1,
+     "t": "Y FUÉ, que acabando Jesús de dar mandamientos á sus doce discípulos, se fué de allí á enseñar y á predicar en las ciudades de ellos."
+    },
+    {
+     "n": 2,
+     "t": "Y oyendo Juan en la prisión los hechos de Cristo, le envió dos de sus discípulos,"
+    },
+    {
+     "n": 3,
+     "t": "Diciendo: ¿Eres tú aquél que había de venir, ó esperaremos á otro?"
+    },
+    {
+     "n": 4,
+     "t": "Y respondiendo Jesús, les dijo: Id, y haced saber á Juan las cosas que oís y veis:"
+    },
+    {
+     "n": 5,
+     "t": "Los ciegos ven, y los cojos andan; los leprosos son limpiados, y los sordos oyen; los muertos son resucitados, y á los pobres es anunciado el evangelio."
+    },
+    {
+     "n": 6,
+     "t": "Y bienaventurado es el que no fuere escandalizado en mí."
+    },
+    {
+     "n": 7,
+     "t": "E idos ellos, comenzó Jesús á decir de Juan á las gentes: ¿Qué salisteis á ver al desierto? ¿una caña que es meneada del viento?"
+    },
+    {
+     "n": 8,
+     "t": "Mas ¿qué salisteis á ver? ¿un hombre cubierto de delicados vestidos? He aquí, los que traen vestidos delicados, en las casas de los reyes están."
+    },
+    {
+     "n": 9,
+     "t": "Mas ¿qué salisteis á ver? ¿un profeta? También os digo, y más que profeta."
+    },
+    {
+     "n": 10,
+     "t": "Porque éste es de quien está escrito: He aquí, yo envío mi mensajero delante de tu faz, que aparejará tu camino delante de ti."
+    },
+    {
+     "n": 11,
+     "t": "De cierto os digo, que no se levantó entre los que nacen de mujeres otro mayor que Juan el Bautista; mas el que es muy más pequeño en el reino de los cielos, mayor es que él."
+    },
+    {
+     "n": 12,
+     "t": "Desde los días de Juan el Bautista hasta ahora, al reino de los cielos se hace fuerza, y los valientes lo arrebatan."
+    },
+    {
+     "n": 13,
+     "t": "Porque todos los profetas y la ley hasta Juan profetizaron."
+    },
+    {
+     "n": 14,
+     "t": "Y si queréis recibir, él es aquel Elías que había de venir."
+    },
+    {
+     "n": 15,
+     "t": "El que tiene oídos para oir, oiga."
+    },
+    {
+     "n": 16,
+     "t": "Mas ¿á quién compararé esta generación? Es semejante á los muchachos que se sientan en las plazas, y dan voces á sus compañeros,"
+    },
+    {
+     "n": 17,
+     "t": "Y dicen: Os tañimos flauta, y no bailasteis; os endechamos, y no lamentasteis."
+    },
+    {
+     "n": 18,
+     "t": "Porque vino Juan, que ni comía ni bebía, y dicen: Demonio tiene."
+    },
+    {
+     "n": 19,
+     "t": "Vino el Hijo del hombre, que come y bebe, y dicen: He aquí un hombre comilón, y bebedor de vino, amigo de publicanos y de pecadores. Mas la sabiduría es justificada por sus hijos."
+    },
+    {
+     "n": 20,
+     "t": "Entonces comenzó á reconvenir á las ciudades en las cuales habían sido hechas muy muchas de sus maravillas, porque no se habían arrepentido, diciendo:"
+    },
+    {
+     "n": 21,
+     "t": "¡Ay de ti, Corazín! ¡Ay de ti, Bethsaida! porque si en Tiro y en Sidón fueran hechas las maravillas que han sido hechas en vosotras, en otro tiempo se hubieran arrepentido en saco y en ceniza."
+    },
+    {
+     "n": 22,
+     "t": "Por tanto os digo, que á Tiro y á Sidón será más tolerable el castigo en el día del juicio, que á vosotras."
+    },
+    {
+     "n": 23,
+     "t": "Y tú, Capernaum, que eres levantada hasta el cielo, hasta los infiernos serás abajada; porque si en los de Sodoma fueran hechas las maravillas que han sido hechas en ti, hubieran quedado hasta el día de hoy."
+    },
+    {
+     "n": 24,
+     "t": "Por tanto os digo, que á la tierra de los de Sodoma será más tolerable el castigo en el día del juicio, que á ti."
+    },
+    {
+     "n": 25,
+     "t": "En aquel tiempo, respondiendo Jesús, dijo: Te alabo, Padre, Señor del cielo y de la tierra, que hayas escondido estas cosas de los sabios y de los entendidos, y las hayas revelado á los niños."
+    },
+    {
+     "n": 26,
+     "t": "Así, Padre, pues que así agradó en tus ojos."
+    },
+    {
+     "n": 27,
+     "t": "Todas las cosas me son entregadas de mi Padre: y nadie conoció al Hijo, sino el Padre; ni al Padre conoció alguno, sino el Hijo, y aquel á quien el Hijo lo quisiere revelar."
+    },
+    {
+     "n": 28,
+     "t": "Venid á mí todos los que estáis trabajados y cargados, que yo os haré descansar."
+    },
+    {
+     "n": 29,
+     "t": "Llevad mi yugo sobre vosotros, y aprended de mí, que soy manso y humilde de corazón; y hallaréis descanso para vuestras almas."
+    },
+    {
+     "n": 30,
+     "t": "Porque mi yugo es fácil, y ligera mi carga."
+    }
+   ]
+  }
+ },
+ {
+  "id": "philippians4",
+  "chapter": 4,
+  "verses": [
+   6,
+   7
+  ],
+  "book": {
+   "en": "Philippians",
+   "es": "Filipenses"
+  },
+  "text": {
+   "en": [
+    {
+     "n": 1,
+     "t": "Therefore, my brethren dearly beloved and longed for, my joy and crown, so stand fast in the Lord, my dearly beloved."
+    },
+    {
+     "n": 2,
+     "t": "I beseech Euodias, and beseech Syntyche, that they be of the same mind in the Lord."
+    },
+    {
+     "n": 3,
+     "t": "And I intreat thee also, true yokefellow, help those women which laboured with me in the gospel, with Clement also, and with other my fellowlabourers, whose names are in the book of life."
+    },
+    {
+     "n": 4,
+     "t": "Rejoice in the Lord alway: and again I say, Rejoice."
+    },
+    {
+     "n": 5,
+     "t": "Let your moderation be known unto all men. The Lord is at hand."
+    },
+    {
+     "n": 6,
+     "t": "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God."
+    },
+    {
+     "n": 7,
+     "t": "And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus."
+    },
+    {
+     "n": 8,
+     "t": "Finally, brethren, whatsoever things are true, whatsoever things are honest, whatsoever things are just, whatsoever things are pure, whatsoever things are lovely, whatsoever things are of good report; if there be any virtue, and if there be any praise, think on these things."
+    },
+    {
+     "n": 9,
+     "t": "Those things, which ye have both learned, and received, and heard, and seen in me, do: and the God of peace shall be with you."
+    },
+    {
+     "n": 10,
+     "t": "But I rejoiced in the Lord greatly, that now at the last your care of me hath flourished again; wherein ye were also careful, but ye lacked opportunity."
+    },
+    {
+     "n": 11,
+     "t": "Not that I speak in respect of want: for I have learned, in whatsoever state I am, therewith to be content."
+    },
+    {
+     "n": 12,
+     "t": "I know both how to be abased, and I know how to abound: every where and in all things I am instructed both to be full and to be hungry, both to abound and to suffer need."
+    },
+    {
+     "n": 13,
+     "t": "I can do all things through Christ which strengtheneth me."
+    },
+    {
+     "n": 14,
+     "t": "Notwithstanding ye have well done, that ye did communicate with my affliction."
+    },
+    {
+     "n": 15,
+     "t": "Now ye Philippians know also, that in the beginning of the gospel, when I departed from Macedonia, no church communicated with me as concerning giving and receiving, but ye only."
+    },
+    {
+     "n": 16,
+     "t": "For even in Thessalonica ye sent once and again unto my necessity."
+    },
+    {
+     "n": 17,
+     "t": "Not because I desire a gift: but I desire fruit that may abound to your account."
+    },
+    {
+     "n": 18,
+     "t": "But I have all, and abound: I am full, having received of Epaphroditus the things which were sent from you, an odour of a sweet smell, a sacrifice acceptable, wellpleasing to God."
+    },
+    {
+     "n": 19,
+     "t": "But my God shall supply all your need according to his riches in glory by Christ Jesus."
+    },
+    {
+     "n": 20,
+     "t": "Now unto God and our Father be glory for ever and ever. Amen."
+    },
+    {
+     "n": 21,
+     "t": "Salute every saint in Christ Jesus. The brethren which are with me greet you."
+    },
+    {
+     "n": 22,
+     "t": "All the saints salute you, chiefly they that are of Cesar’s household."
+    },
+    {
+     "n": 23,
+     "t": "The grace of our Lord Jesus Christ be with you all. Amen. It was written to the Philippians from Rome by Epaphroditus."
+    }
+   ],
+   "es": [
+    {
+     "n": 1,
+     "t": "ASÍ que, hermanos míos amados y deseados, gozo y corona mía, estad así firmes en el Señor, amados."
+    },
+    {
+     "n": 2,
+     "t": "A Euodias ruego, y á Syntychê exhorto, que sientan lo mismo en el Señor."
+    },
+    {
+     "n": 3,
+     "t": "Asimismo te ruego también á ti, hermano compañero, ayuda á las que trabajaron juntamente conmigo en el evangelio, con Clemente también, y los demás mis colaboradores, cuyos nombres están en el libro de la vida."
+    },
+    {
+     "n": 4,
+     "t": "Gozaos en el Señor siempre: otra vez digo: Que os gocéis."
+    },
+    {
+     "n": 5,
+     "t": "Vuestra modestia sea conocida de todos los hombres. El Señor está cerca."
+    },
+    {
+     "n": 6,
+     "t": "Por nada estéis afanosos; sino sean notorias vuestras peticiones delante de Dios en toda oración y ruego, con hacimiento de gracias."
+    },
+    {
+     "n": 7,
+     "t": "Y la paz de Dios, que sobrepuja todo entendimiento, guardará vuestros corazones y vuestros entendimientos en Cristo Jesús."
+    },
+    {
+     "n": 8,
+     "t": "Por lo demás, hermanos, todo lo que es verdadero, todo lo honesto, todo lo justo, todo lo puro, todo lo amable, todo lo que es de buen nombre; si hay virtud alguna, si alguna alabanza, en esto pensad."
+    },
+    {
+     "n": 9,
+     "t": "Lo que aprendisteis y recibisteis y oísteis y visteis en mí, esto haced; y el Dios de paz será con vosotros."
+    },
+    {
+     "n": 10,
+     "t": "Mas en gran manera me gocé en el Señor de que ya al fin ha reflorecido vuestro cuidado de mí; de lo cual aun estabais solícitos, pero os faltaba la oportunidad."
+    },
+    {
+     "n": 11,
+     "t": "No lo digo en razón de indigencia, pues he aprendido á contentarme con lo que tengo."
+    },
+    {
+     "n": 12,
+     "t": "Sé estar humillado, y sé tener abundancia: en todo y por todo estoy enseñado, así para hartura como para hambre, así para tener abundancia como para padecer necesidad."
+    },
+    {
+     "n": 13,
+     "t": "Todo lo puedo en Cristo que me fortalece."
+    },
+    {
+     "n": 14,
+     "t": "Sin embargo, bien hicisteis que comunicasteis juntamente á mi tribulación."
+    },
+    {
+     "n": 15,
+     "t": "Y sabéis también vosotros, oh Filipenses, que al principio del evangelio, cuando partí de Macedonia, ninguna iglesia me comunicó en razón de dar y recibir, sino vosotros solos."
+    },
+    {
+     "n": 16,
+     "t": "Porque aun á Tesalónica me enviasteis lo necesario una y dos veces."
+    },
+    {
+     "n": 17,
+     "t": "No porque busque dádivas; mas busco fruto que abunde en vuestra cuenta."
+    },
+    {
+     "n": 18,
+     "t": "Empero todo lo he recibido, y tengo abundancia: estoy lleno, habiendo recibido de Epafrodito lo que enviasteis, olor de suavidad, sacrificio acepto, agradable á Dios."
+    },
+    {
+     "n": 19,
+     "t": "Mi Dios, pues, suplirá todo lo que os falta conforme á sus riquezas en gloria en Cristo Jesús."
+    },
+    {
+     "n": 20,
+     "t": "Al Dios pues y Padre nuestro sea gloria por los siglos de los siglos. Amén."
+    },
+    {
+     "n": 21,
+     "t": "Saludad á todos los santos en Cristo Jesús. Los hermanos que están conmigo os saludan."
+    },
+    {
+     "n": 22,
+     "t": "Todos los santos os saludan, y mayormente los que son de casa de César."
+    },
+    {
+     "n": 23,
+     "t": "La gracia de nuestro Señor Jesucristo sea con todos vosotros. Amén. Escrita de Roma con Epafrodito."
+    }
+   ]
+  }
+ }
+]
