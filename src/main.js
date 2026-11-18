@@ -14,7 +14,7 @@ import scripture from './data/scripture.json';
 import { STRINGS, REFS, WHATSAPP_NUMBER } from './i18n.js';
 import { TRANSLATION } from './textures.js';
 import { N_LEAVES, T, clamp01, lerp, smooth, range, spreadWindow } from './timeline.js';
-import { BibleScene } from './bible.js';
+import { FilmPlayer } from './film.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -114,13 +114,37 @@ function updateOverlay(P) {
 }
 
 /* ---------- 3D scene ---------- */
-const canvas = document.getElementById('scene');
-let scene = null;
-try {
-  scene = new BibleScene(canvas, { mobile, lang });
-} catch (err) {
-  console.warn('3D scene unavailable', err);
-  root.classList.add('no-webgl');
+let canvas = document.getElementById('scene');
+let scene = null;   // the film player, or the live 3D Bible as a fallback
+let live = false;
+
+// The movie-quality film is the main experience. If its frames cannot be
+// loaded (or ?mode=live is set), the live real-time 3D Bible takes over.
+async function createScene() {
+  if (new URLSearchParams(location.search).get('mode') !== 'live') {
+    try {
+      const film = new FilmPlayer(canvas);
+      await film.init(lang);
+      return film;
+    } catch (err) {
+      console.warn('Film unavailable, using the live 3D Bible', err);
+    }
+  }
+  try {
+    const fresh = canvas.cloneNode(false);
+    canvas.replaceWith(fresh);
+    canvas = fresh;
+    const { BibleScene } = await import('./bible.js');
+    const s = new BibleScene(canvas, { mobile, lang });
+    await s.init(lang);
+    s.setLanguage = (l) => s.drawTextures(l);
+    live = true;
+    return s;
+  } catch (err) {
+    console.warn('3D scene unavailable', err);
+    root.classList.add('no-webgl');
+    return null;
+  }
 }
 
 let visible = !document.hidden;
@@ -141,10 +165,15 @@ function frame(now) {
 }
 
 async function start() {
-  if (scene) {
-    await scene.init(lang);
-    // The Bible descends into view once, on arrival. Everything after that
-    // is driven by the visitor's scrolling.
+  scene = await createScene();
+  if (scene && (!live || scene.sky)) {
+    // The film is set in a bright sky: captions turn dark on an ivory glow.
+    DARK.bg = [243, 235, 221];
+    DARK.fg = [44, 33, 24];
+    lastTone = -1;
+    root.classList.add('film-mode');
+  }
+  if (live && false) {
     if (!reducedMotion && heldP === null && window.scrollY < 40) {
       state.intro = 1;
       gsap.to(state, { intro: 0, duration: 3, ease: 'power2.out', delay: 0.2 });
@@ -161,7 +190,7 @@ document.querySelectorAll('.lang button').forEach((button) => {
     lang = button.dataset.lang;
     try { localStorage.setItem('despertar-lang', lang); } catch { /* ignore */ }
     applyLanguage();
-    scene?.drawTextures(lang);
+    scene?.setLanguage(lang);
   });
 });
 

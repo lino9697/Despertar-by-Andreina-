@@ -2,3 +2,11 @@
 .DS_Store
 node_modules
 dist
+
+# Film production files: renders, test output and source textures stay local.
+# The finished frames the site plays live in public/film.
+film/textures/
+film/sky/
+film/review*/
+film/test*/
+film/render.log

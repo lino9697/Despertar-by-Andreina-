@@ -16,12 +16,12 @@ import { N_LEAVES, T, spreadWindow } from './timeline.js';
 function buildShots() {
   const shots = [
     // arrival: low and close across the leather, then rising around the book
-    { p: 0.0, pos: [1.35, 1.4, 2.5], tgt: [0, 0.42, 0] },
-    { p: 0.06, pos: [0.9, 1.15, 2.8], tgt: [0, 0.24, 0] },
-    { p: 0.11, pos: [0.2, 1.3, 2.9], tgt: [0, 0.15, 0] },
+    { p: 0.0, pos: [0.9, 1.05, 3.6], tgt: [0, 0.85, 0] },
+    { p: 0.06, pos: [0.75, 0.62, 3.3], tgt: [0, 0.38, 0] },
+    { p: 0.11, pos: [0.25, 0.55, 3.1], tgt: [0, 0.22, 0] },
     // awakening: swing to the open side to watch the cover lift
-    { p: 0.16, pos: [1.5, 1.3, 3.1], tgt: [-0.15, 0.3, 0] },
-    { p: 0.21, pos: [0.9, 2.5, 2.7], tgt: [0, 0.15, 0.05] },
+    { p: 0.16, pos: [1.2, 0.75, 3.1], tgt: [-0.15, 0.32, 0] },
+    { p: 0.21, pos: [0.9, 2.2, 2.9], tgt: [0, 0.15, 0.05] },
   ];
   // the Word: settle over each spread to read, dip low for every page turn
   for (let k = 0; k <= N_LEAVES; k++) {

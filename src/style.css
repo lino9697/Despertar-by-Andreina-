@@ -57,6 +57,15 @@ a { color: inherit; }
   pointer-events: none;
   transform: scaleY(var(--bars, 0));
 }
+/* soft lens vignette over the film while the letterbox is in */
+.bars {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: var(--bars, 0);
+  background: radial-gradient(ellipse 75% 70% at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.45) 100%);
+}
 .bars::before { top: 0; transform-origin: top; }
 .bars::after { bottom: 0; transform-origin: bottom; }
 
@@ -115,6 +124,21 @@ main { position: relative; z-index: 1; }
   visibility: hidden;
   will-change: opacity, transform;
   text-shadow: 0 0 22px var(--bg), 0 0 8px var(--bg);
+  isolation: isolate;
+}
+/* a soft veil of light behind every caption, so the words stay readable over
+   the bright radiance and the shadowed hollows of the clouds alike */
+/* on the bright sky and ivory sections a deeper gold keeps the small gold text readable */
+.film-mode { --gold: #87622a; }
+.film-mode .cap::before {
+  content: '';
+  position: absolute;
+  inset: -28px -9%;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--bg) 78%, transparent), color-mix(in srgb, var(--bg) 40%, transparent) 62%, transparent);
+  filter: blur(14px);
+  pointer-events: none;
 }
 .cap.top { top: calc(var(--bar) + clamp(16px, 3vh, 34px)); }
 .cap.bottom { bottom: calc(var(--bar) + clamp(12px, 2.4vh, 28px)); }

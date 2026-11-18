@@ -380,6 +380,7 @@ export class BibleScene {
     floor.position.y = -CT - 0.003;
     floor.receiveShadow = true;
     this.scene.add(floor);
+    this.floor = floor;
 
     // visible shaft of light falling from the spotlight
     const beamGeo = new THREE.CylinderGeometry(0.12, 2.9, 7.4, 48, 1, true);
@@ -398,6 +399,7 @@ export class BibleScene {
     beam.quaternion.setFromUnitVectors(new THREE.Vector3(0, -1, 0), this.key.position.clone().negate().normalize());
     beam.frustumCulled = false;
     this.scene.add(beam);
+    this.beam = beam;
 
     const cc = makeCanvas(256, 256), cx = cc.getContext('2d');
     const cg = cx.createRadialGradient(128, 128, 20, 128, 128, 128);
@@ -436,8 +438,29 @@ export class BibleScene {
       console.warn('Photo textures unavailable, using drawn textures', err);
       this.photo = null;
     }
-    // light and reflections photographed inside a real church
+    // the heavenly sky rendered for the film (film/sky_panorama.py): the
+    // Bible floats in it, and it lights and reflects on the Bible
     try {
+      const sky = await new THREE.TextureLoader().loadAsync('/textures/heaven.jpg');
+      sky.mapping = THREE.EquirectangularReflectionMapping;
+      sky.colorSpace = THREE.SRGBColorSpace;
+      this.scene.background = sky;
+      this.scene.backgroundRotation.y = Math.PI / 2;   // the radiance sits behind the Bible
+      this.scene.backgroundIntensity = 1.3;
+      const pmrem = new THREE.PMREMGenerator(this.renderer);
+      this.scene.environment = pmrem.fromEquirectangular(sky).texture;
+      this.scene.environmentRotation.y = Math.PI / 2;
+      pmrem.dispose();
+      this.scene.fog = null;
+      this.floor.visible = false;
+      this.contact.visible = false;
+      this.beam.visible = false;
+      this.sky = true;
+    } catch (err) {
+      console.warn('Sky unavailable, using the church interior and table', err);
+    }
+    // light and reflections photographed inside a real church
+    if (!this.sky) try {
       const hdr = await new HDRLoader().setDataType(THREE.FloatType).loadAsync('/textures/church.hdr');
       // the photo is lit by cool window daylight; grade it toward candle-warm
       const d = hdr.image.data;
@@ -458,7 +481,7 @@ export class BibleScene {
       console.warn('Environment light unavailable, using the built-in room', err);
     }
     // the wooden table the Bible rests on
-    try {
+    if (!this.sky) try {
       const [color, normal, rough] = await Promise.all(['wood-color', 'wood-normal', 'wood-rough'].map(image));
       const m = this.floorMat;
       m.map = this.photoTex(color, 13, 13, true);
@@ -739,20 +762,23 @@ export class BibleScene {
 
     // keep the book centred, turned slightly while closed
     this.book.position.x = lerp(-PW / 2, S / 2, o);
-    this.root.rotation.y = lerp(-0.34, 0, o);
-    const drop = smoother(intro);
-    this.root.position.y = drop * 3.4 + lerp(0.42, 0, arrive) * (1 - o);
-    this.root.rotation.x = drop * -0.5 + lerp(0.1, 0, arrive);
-    this.root.rotation.z = drop * 0.25 + lerp(-0.035, 0, arrive);
+    // The Bible descends from above the frame and settles over the first
+    // tenth of the scroll (the brief's "The Arrival"), exactly as in the film.
+    const drop = 0;
+    const land = smoother(range(P, 0, T.arrivalEnd));
+    this.root.position.y = lerp(1.1, 0, land);
+    this.root.rotation.x = lerp(0.32, 0, land);
+    this.root.rotation.y = lerp(-0.34, 0, o) + lerp(-0.42, 0, land);
+    this.root.rotation.z = lerp(-0.1, 0, land);
 
-    this.ribbon.update(this.rightStack.ribbonX, this.rightStack.ribbonY, -CT - this.root.position.y, this.rightStack.ribbonTilt);
+    this.ribbon.update(this.rightStack.ribbonX, this.rightStack.ribbonY, this.sky ? -10 : -CT - this.root.position.y, this.rightStack.ribbonTilt);
 
     // camera: glide along the shot path, with a faint hand-held breath
     this.path.at(P, _pos, _tgt);
     const aspect = this.camera.aspect;
     // step back on narrow or short windows so the captions have room
     const short = Math.min(1.4, Math.max(1, 760 / window.innerHeight));
-    const fit = lerp(Math.max(1, 0.78 / aspect), Math.max(1, 1.3 / aspect) * short, o);
+    const fit = lerp(Math.max(1, 1.05 / aspect),Math.max(1, 1.3 / aspect) * short, o);
     _pos.sub(_tgt).multiplyScalar(fit).add(_tgt);
     const tt = reducedMotion ? 0 : time;
     _pos.x += Math.sin(tt * 0.5) * 0.012;
@@ -771,8 +797,16 @@ export class BibleScene {
     this.glow.position.x = (-S / 2) * o;
     this.glow.intensity = (1.1 * Math.sin(Math.PI * range(P, T.openStart, T.openEnd + 0.04)) + 0.12 * o) * (1 - bright);
     this.scene.environmentIntensity = (lerp(0.3, 0.42, arrive) + bright * 0.15) * reveal;
-    this.scene.background.lerpColors(this.bgDark, this.bgLight, bright);
-    this.scene.fog.color.copy(this.scene.background);
+    if (this.sky) {
+      this.scene.environmentIntensity = lerp(0.55, 0.7, arrive) + 0.1 * o + bright * 0.2;
+      this.key.intensity = lerp(0.9, 1.05, arrive);
+      this.rim.intensity = 6;
+      this.glow.position.y = 1.1;   // higher up, so it washes the pages instead of spotting them
+      this.glow.intensity = (0.3 + 0.9 * Math.sin(Math.PI * range(P, T.openStart, T.openEnd + 0.06)) + 0.3 * o) * 0.9;
+    } else {
+      this.scene.background.lerpColors(this.bgDark, this.bgLight, bright);
+      this.scene.fog.color.copy(this.scene.background);
+    }
     this.floorMat.color.lerpColors(this.floorDark, this.floorLight, bright);
     this.floorMat.roughness = this.hasWood ? 1 : lerp(0.42, 0.9, bright);
     const lift = this.root.position.y;
@@ -805,8 +839,8 @@ export class BibleScene {
       focus,
       range: focus * lerp(0.34, 0.32, shallow),
       blur: lerp(3, 5, shallow),
-      bloom: lerp(0.22, 0.04, bright),
-      vignette: lerp(0.85, 0.12, bright),
+      bloom: this.sky ? 0.18 : lerp(0.22, 0.04, bright),
+      vignette: this.sky ? 0.35 : lerp(0.85, 0.12, bright),
       grain: lerp(0.05, 0.03, bright),
       time: reducedMotion ? 0 : Math.floor(time * 24) / 24,
     });
