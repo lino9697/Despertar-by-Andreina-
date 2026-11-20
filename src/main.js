@@ -73,12 +73,24 @@ applyLanguage();
 // The journey is as long as its pacing needs (timeline.js): long, calm
 // stretches for reading each page, a full screen of scrolling per turn.
 root.style.setProperty('--journey', `${Math.round(JOURNEY_SCROLL * (mobile ? 0.9 : 1)) + 100}vh`);
-const state = { S: 0, intro: 0, get P() { return scrollToP(this.S); } };
-gsap.to(state, {
-  S: 1,
-  ease: 'none',
-  scrollTrigger: { trigger: '#journey', start: 'top top', end: 'bottom bottom', scrub: reducedMotion ? true : 1.2 },
+// S follows the scroll position exactly; the film eases toward it every
+// frame with a short time constant, so a wheel notch glides instead of
+// jumping, and the picture never trails far behind the hand.
+const state = { S: 0, shown: 0, intro: 0, get P() { return scrollToP(this.shown); } };
+const journeyTrigger = ScrollTrigger.create({
+  trigger: '#journey',
+  start: 'top top',
+  end: 'bottom bottom',
+  onUpdate: (self) => { state.S = self.progress; },
+  onRefresh: (self) => { state.S = self.progress; },
 });
+state.S = state.shown = journeyTrigger.progress;
+const EASE_TIME = reducedMotion ? 0 : 0.16;   // seconds
+function easeScroll(dt) {
+  const k = EASE_TIME > 0 ? 1 - Math.exp(-dt / EASE_TIME) : 1;
+  state.shown += (state.S - state.shown) * k;
+  if (Math.abs(state.S - state.shown) < 1e-5) state.shown = state.S;
+}
 
 const caps = [...document.querySelectorAll('.cap')].map((el) => ({ el, a: +el.dataset.in, b: +el.dataset.out, shown: -1 }));
 const FADE = 0.008;   // short fades: each verse stays readable for nearly its whole stretch
@@ -106,14 +118,23 @@ function updateOverlay(P) {
     root.style.setProperty('--fg', mix(DARK.fg, LIGHT.fg, bright));
   }
   const fade = smooth(range(P, T.fadeStart, 1));
-  root.style.setProperty('--scene-opacity', (1 - 0.74 * fade).toFixed(3));
-  root.style.setProperty('--scene-filter', fade > 0.01 ? `blur(${(fade * 3).toFixed(2)}px)` : 'none');
+  setVar('--scene-opacity', (1 - 0.74 * fade).toFixed(3));
+  setVar('--scene-filter', fade > 0.01 ? `blur(${(fade * 3).toFixed(1)}px)` : 'none');
   const bars = smooth(range(P, 0.01, 0.06)) * (1 - smooth(range(P, T.fadeStart, 0.97)));
-  root.style.setProperty('--bars', bars.toFixed(3));
-  root.style.setProperty('--header-fg', bars > 0.5 ? 'rgb(242,231,211)' : 'var(--fg)');
-  root.style.setProperty('--p', P.toFixed(4));
-  root.style.setProperty('--rail', (1 - fade).toFixed(3));
-  root.style.setProperty('--wordmark', clamp01((P - 0.07) / 0.03).toFixed(3));
+  setVar('--bars', bars.toFixed(3));
+  setVar('--header-fg', bars > 0.5 ? 'rgb(242,231,211)' : 'var(--fg)');
+  setVar('--p', P.toFixed(3));
+  setVar('--rail', (1 - fade).toFixed(3));
+  setVar('--wordmark', clamp01((P - 0.07) / 0.03).toFixed(3));
+}
+
+// Changing a variable on the root restyles the whole page, so only write
+// the ones whose value actually changed this frame.
+const vars = {};
+function setVar(name, value) {
+  if (vars[name] === value) return;
+  vars[name] = value;
+  root.style.setProperty(name, value);
 }
 
 /* ---------- 3D scene ---------- */
@@ -127,7 +148,7 @@ async function createScene() {
   if (new URLSearchParams(location.search).get('mode') !== 'live') {
     try {
       const film = new FilmPlayer(canvas);
-      await film.init(lang);
+      await film.init(lang, heldP ?? state.P);
       return film;
     } catch (err) {
       console.warn('Film unavailable, using the live 3D Bible', err);
@@ -157,11 +178,15 @@ window.addEventListener('resize', () => scene?.resize());
 // For checking a single moment while developing: /?p=0.42 holds the journey there.
 const held = new URLSearchParams(location.search).get('p');
 const heldP = held === null ? null : clamp01(parseFloat(held) || 0);
-if (heldP !== null) window.__scene = () => scene;
+if (heldP !== null || import.meta.env.DEV) window.__scene = () => scene;
 
+let lastNow = 0;
 function frame(now) {
   requestAnimationFrame(frame);
+  const dt = Math.min(0.1, Math.max(0, (now - lastNow) / 1000));
+  lastNow = now;
   if (!visible) return;
+  easeScroll(dt);
   const P = heldP ?? state.P;
   updateOverlay(P);
   scene?.update(P, state.intro, now / 1000, reducedMotion);
