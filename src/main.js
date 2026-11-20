@@ -13,7 +13,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import scripture from './data/scripture.json';
 import { STRINGS, REFS, WHATSAPP_NUMBER } from './i18n.js';
 import { TRANSLATION } from './textures.js';
-import { N_LEAVES, T, clamp01, lerp, smooth, range, spreadWindow } from './timeline.js';
+import { N_LEAVES, T, clamp01, lerp, smooth, range, spreadWindow, scrollToP, JOURNEY_SCROLL } from './timeline.js';
 import { FilmPlayer } from './film.js';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -70,15 +70,18 @@ function applyLanguage() {
 applyLanguage();
 
 /* ---------- scroll state ---------- */
-const state = { P: 0, intro: 0 };
+// The journey is as long as its pacing needs (timeline.js): long, calm
+// stretches for reading each page, a full screen of scrolling per turn.
+root.style.setProperty('--journey', `${Math.round(JOURNEY_SCROLL * (mobile ? 0.9 : 1)) + 100}vh`);
+const state = { S: 0, intro: 0, get P() { return scrollToP(this.S); } };
 gsap.to(state, {
-  P: 1,
+  S: 1,
   ease: 'none',
-  scrollTrigger: { trigger: '#journey', start: 'top top', end: 'bottom bottom', scrub: reducedMotion ? true : 1 },
+  scrollTrigger: { trigger: '#journey', start: 'top top', end: 'bottom bottom', scrub: reducedMotion ? true : 1.2 },
 });
 
 const caps = [...document.querySelectorAll('.cap')].map((el) => ({ el, a: +el.dataset.in, b: +el.dataset.out, shown: -1 }));
-const FADE = 0.014;
+const FADE = 0.008;   // short fades: each verse stays readable for nearly its whole stretch
 
 const DARK = { bg: [11, 8, 6], fg: [242, 231, 211] };
 const LIGHT = { bg: [243, 235, 221], fg: [44, 33, 24] };

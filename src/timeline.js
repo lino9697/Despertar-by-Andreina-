@@ -36,3 +36,39 @@ export const turnProgress = (p, i) => {
   const start = T.firstTurn + i * T.turnEvery;
   return range(p, start, start + T.turnLength);
 };
+
+// Pacing: how much scrolling (in screen heights x 100) each part of the
+// story takes. P keeps its meaning (the film is rendered against it); this
+// only decides how far the visitor scrolls to move through each part, so a
+// slow scroll never rushes from one page to the next. Every open page gets
+// a long, calm stretch to read, and each page turn plays over about a
+// screen of scrolling.
+const HOLD = 135;   // reading an open spread
+const TURN = 95;    // one page turning
+function paceKnots() {
+  const knots = [[0, 0], [T.arrivalEnd, 100], [T.openEnd, 150], [T.firstTurn, HOLD]];
+  for (let i = 0; i < N_LEAVES; i++) {
+    const start = T.firstTurn + i * T.turnEvery;
+    if (i > 0) knots.push([start, HOLD]);
+    knots.push([start + T.turnLength, TURN]);
+  }
+  knots.push([0.8, HOLD], [T.fadeStart, 120], [1, 100]);
+  // turn [P, segment length] pairs into [P, scroll position] knots
+  let s = 0;
+  return knots.map(([p, len]) => [p, (s += len)]);
+}
+const KNOTS = paceKnots();
+export const JOURNEY_SCROLL = KNOTS[KNOTS.length - 1][1];   // in vh
+
+// Scroll progress (0..1 through the journey) to story progress P.
+export function scrollToP(s) {
+  const x = clamp01(s) * JOURNEY_SCROLL;
+  for (let i = 1; i < KNOTS.length; i++) {
+    const [p1, s1] = KNOTS[i];
+    if (x <= s1) {
+      const [p0, s0] = KNOTS[i - 1];
+      return s1 > s0 ? lerp(p0, p1, (x - s0) / (s1 - s0)) : p1;
+    }
+  }
+  return 1;
+}
